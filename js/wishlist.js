@@ -1,62 +1,88 @@
-// Load wishlist from localStorage
-let wishlistData = JSON.parse(localStorage.getItem("wishlist")) || [];
+document.addEventListener("DOMContentLoaded", () => {
 
-let container = document.getElementById("wishlistBox");
+    // Load wishlist safely
+    let wishlistData = JSON.parse(localStorage.getItem("wishlist")) || [];
+    let container = document.getElementById("wishlistBox");
 
-// Display items on page
-function loadWishlist() {
-    container.innerHTML = "";
+    if (!container) return;
 
-    if (wishlistData.length === 0) {
-        container.innerHTML = "<h2 style='grid-column: 1/-1; text-align:center;'>No items in wishlist</h2>";
-        return;
-    }
+    // ---------------- LOAD WISHLIST ----------------
+    function loadWishlist() {
+        container.innerHTML = "";
 
-    wishlistData.forEach(item => {
-        container.innerHTML += `
-            <div class="wishlist-item" id="item-${item.id}">
-                <img src="${item.img}" alt="${item.name}">
-                <h3>${item.name}</h3>
-                <p>₹ ${item.price}</p>
+        if (wishlistData.length === 0) {
+            container.innerHTML =
+                "<h2 style='grid-column:1/-1; text-align:center;'>No items in wishlist</h2>";
+            return;
+        }
 
-                <div class="btn-row">
-                    <button class="remove-btn" onclick="removeItem('${item.id}')">Remove</button>
-                    <button class="cart-btn" onclick="moveToCart('${item.id}')">Add to Cart</button>
+        wishlistData.forEach(item => {
+            let price = Number(item.price);
+            if (isNaN(price)) price = 0; // safety
+
+            container.innerHTML += `
+                <div class="wishlist-item" id="item-${item.id}">
+                    <img src="${item.img}" alt="${item.name}">
+                    <h3>${item.name}</h3>
+                    <p>₹ ${price}</p>
+
+                    <div class="btn-row">
+                        <button class="remove-btn" onclick="removeItem('${item.id}')">
+                            Remove
+                        </button>
+                        <button class="cart-btn" onclick="moveToCart('${item.id}')">
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
-            </div>
-        `;
-    });
-}
-
-// Remove only selected item
-function removeItem(id) {
-    wishlistData = wishlistData.filter(item => item.id !== id);
-    localStorage.setItem("wishlist", JSON.stringify(wishlistData));
-
-    // Remove item from UI
-    document.getElementById("item-" + id).remove();
-
-    // If no items left → show message
-    if (wishlistData.length === 0) {
-        container.innerHTML = "<h2 style='grid-column: 1/-1; text-align:center;'>No items in wishlist</h2>";
+            `;
+        });
     }
-}
 
-// Move selected item to cart
-function moveToCart(id) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    // ---------------- REMOVE FROM WISHLIST ----------------
+    window.removeItem = function (id) {
+        wishlistData = wishlistData.filter(item => item.id !== id);
+        localStorage.setItem("wishlist", JSON.stringify(wishlistData));
 
-    let selectedItem = wishlistData.find(item => item.id === id);
-    if (!selectedItem) return;
+        const el = document.getElementById("item-" + id);
+        if (el) el.remove();
 
-    cart.push(selectedItem);
-    localStorage.setItem("cart", JSON.stringify(cart));
+        if (wishlistData.length === 0) {
+            container.innerHTML =
+                "<h2 style='grid-column:1/-1; text-align:center;'>No items in wishlist</h2>";
+        }
+    };
 
-    alert("Item added to cart 🛒");
+    // ---------------- MOVE TO CART ----------------
+    window.moveToCart = function (id) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Optional: remove from wishlist automatically
-    // removeItem(id);
-}
+        let selectedItem = wishlistData.find(item => item.id === id);
+        if (!selectedItem) return;
 
-// Initial Load
-loadWishlist();
+        let price = Number(selectedItem.price);
+        if (isNaN(price)) price = 0; // safety fallback
+
+        let existingItem = cart.find(item => item.id === id);
+
+        if (existingItem) {
+            existingItem.qty += 1;
+        } else {
+            cart.push({
+                id: selectedItem.id,
+                name: selectedItem.name,
+                price: price,
+                img: selectedItem.img,
+                qty: 1
+            });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Item added to cart 🛒");
+
+        removeItem(id); // auto remove from wishlist
+    };
+
+    // Initial load
+    loadWishlist();
+});

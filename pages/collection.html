@@ -1,46 +1,56 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce website</title>
-
-    <link rel="stylesheet" href="../css/collection.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/collection.css" />
+    <script
+      src="https://kit.fontawesome.com/0e53af926d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-
   <body>
+    <!--header section-->
 
-    <!-- HEADER -->
     <header>
       <div id="header">
         <div class="header-logo">
-          <a href="index.html"><img src="../images/logo.png" alt=""></a>
+          <a href="indext.html"><img src="../images/logo.png" alt="" /></a>
         </div>
-
         <div class="header-list">
           <nav class="header-list-nav">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a class="active" href="">Collection</a></li>
+              <li><a  href="index.html">Home</a></li>
+              <li><a class="active" href="collection.html">Collection</a></li>
               <li><a href="blog.html">Category</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </nav>
+          <header class="header-icons">
+   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-          <div class="header-icons">
-            <div class="icon-box"><i class="fa fa-bag-shopping"></i></div>
-            <div class="icon-box">
-  <a href="wishlist.html" class="wishlist-link" aria-label="Open wishlist">
+          <div class="header-list-icon">
+            <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
+          </div>
+           <div class="icon-box">
+  <a class="active" href="wishlist.html" class="wishlist-link" aria-label="Open wishlist">
     <i class="fa-regular fa-heart"></i>
   </a>
 </div>
-            <div class="icon-box"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <div class="icon-box"><i class="fa-solid fa-bars"></i></div>
-          </div>
+    <div class="icon-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
 
-        </div>
+    <div class="icon-box">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+     </div>
       </div>
+</header>
     </header>
 
     <!-- MAIN SECTION -->
@@ -78,15 +88,20 @@
 
   <!-- ★ NEW: Action buttons container -->
   <div class="action-box">
-    <a href="#" class="cart-btn">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </a>
+     <a href="#"
+   class="cart-btn add-to-cart"
+   data-id="101"
+   data-name="Cartoon Astronaut T-Shirts"
+   data-price="78"
+   data-img="../images/products/f1.jpg">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
 
     <button class="wishlist-btn"
       data-name="Cartoon Astronaut T-Shirts"
       data-id="101"
       data-img="../images/products/f1 .jpg"
-      data-price="$78">
+      data-price="78">
       <i class="fa-regular fa-heart"></i>
     </button>
   </div>
@@ -108,15 +123,20 @@
             <h4 class="price">$78</h4>
 
            <div class="action-box">
-    <a href="#" class="cart-btn">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </a>
+     <a href="#"
+   class="cart-btn add-to-cart"
+   data-id="102"
+   data-name="Cartoon Astronaut T-Shirts"
+   data-price="78"
+   data-img="../images/products/f2.jpg">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
 
     <button class="wishlist-btn"
       data-name="Cartoon Astronaut T-Shirts"
       data-id="102"
       data-img="../images/products/f2.jpg"
-      data-price="$78">
+      data-price="78">
       <i class="fa-regular fa-heart"></i>
     </button>
   </div>
@@ -137,15 +157,20 @@
             <h4 class="price">$78</h4>
 
            <div class="action-box">
-    <a href="#" class="cart-btn">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </a>
+     <a href="#"
+   class="cart-btn add-to-cart"
+   data-id="103"
+   data-name="Cartoon Astronaut T-Shirts"
+   data-price="78"
+   data-img="../images/products/f3.jpg">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
 
     <button class="wishlist-btn"
       data-name="Cartoon Astronaut T-Shirts"
       data-id="103"
       data-img="../images/products/f3.jpg"
-      data-price="$78">
+      data-price="78">
       <i class="fa-regular fa-heart"></i>
     </button>
   </div>
@@ -166,15 +191,20 @@
             <h4 class="price">$78</h4>
 
             <div class="action-box">
-    <a href="#" class="cart-btn">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </a>
+    <a href="#"
+   class="cart-btn add-to-cart"
+   data-id="104"
+   data-name="Cartoon Astronaut T-Shirts"
+   data-price="78"
+   data-img="../images/products/f4.jpg">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
 
     <button class="wishlist-btn"
       data-name="Cartoon Astronaut T-Shirts"
       data-id="104"
       data-img="../images/products/f4.jpg"
-      data-price="$78">
+      data-price="78">
       <i class="fa-regular fa-heart"></i>
     </button>
   </div>
@@ -194,15 +224,20 @@
 
             <h4 class="price">$78</h4>
 <div class="action-box">
-    <a href="#" class="cart-btn">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </a>
+     <a href="#"
+   class="cart-btn add-to-cart"
+   data-id="105"
+   data-name="Cartoon Astronaut T-Shirts"
+   data-price="78"
+   data-img="../images/products/f5.jpg">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
 
     <button class="wishlist-btn"
       data-name="Cartoon Astronaut T-Shirts"
       data-id="105"
       data-img="../images/products/f5.jpg"
-      data-price="$78">
+      data-price="78">
       <i class="fa-regular fa-heart"></i>
     </button>
   </div>
@@ -223,15 +258,20 @@
             <h4 class="price">$78</h4>
 
             <div class="action-box">
-    <a href="#" class="cart-btn">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </a>
+     <a href="#"
+   class="cart-btn add-to-cart"
+   data-id="106"
+   data-name="Cartoon Astronaut T-Shirts"
+   data-price="78"
+   data-img="../images/products/f6.jpg">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
 
     <button class="wishlist-btn"
       data-name="Cartoon Astronaut T-Shirts"
       data-id="106"
       data-img="../images/products/f6.jpg"
-      data-price="$78">
+      data-price="78">
       <i class="fa-regular fa-heart"></i>
     </button>
   </div>
@@ -252,15 +292,20 @@
             <h4 class="price">$78</h4>
 
             <div class="action-box">
-    <a href="#" class="cart-btn">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </a>
+     <a href="#"
+   class="cart-btn add-to-cart"
+   data-id="107"
+   data-name="Cartoon Astronaut T-Shirts"
+   data-price="78"
+   data-img="../images/products/f7.jpg">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
 
     <button class="wishlist-btn"
       data-name="Cartoon Astronaut T-Shirts"
       data-id="107"
       data-img="../images/products/f7.jpg"
-      data-price="$78">
+      data-price="78">
       <i class="fa-regular fa-heart"></i>
     </button>
   </div>
@@ -281,15 +326,20 @@
             <h4 class="price">$78</h4>
 
             <div class="action-box">
-    <a href="#" class="cart-btn">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </a>
+     <a href="#"
+   class="cart-btn add-to-cart"
+   data-id="108"
+   data-name="Cartoon Astronaut T-Shirts"
+   data-price="78"
+   data-img="../images/products/f8.jpg">
+  <i class="fa-solid fa-cart-shopping"></i>
+</a>
 
     <button class="wishlist-btn"
       data-name="Cartoon Astronaut T-Shirts"
       data-id="108"
       data-img="../images/products/f8.jpg"
-      data-price="$78">
+      data-price="78">
       <i class="fa-regular fa-heart"></i>
     </button>
   </div>
@@ -297,14 +347,11 @@
 
         </div>
       </section>
-
-      <!-- NEWSLETTER -->
       <section id="newsletter">
         <div class="newsletter-text">
           <h3>Sign Up For Newsletters</h3>
-          <h5>Get email updates about our latest shop and <span>special offers</span></h5>
+          <h5>get e-mail updates about out latest shop and <span>special offers</span></h5>
         </div>
-
         <div class="form">
           <input type="email" placeholder="Your email address" id="email-address-input">
           <button>Sign Up</button>
@@ -313,45 +360,66 @@
 
     </main>
 
-    <!-- FOOTER -->
+    <!--footer section-->
+
     <footer>
       <div id="footer">
-
         <div class="contact">
-          <img src="../images/logo.png" alt="">
+          <a href="indext.html"><img src="images/logo.png" alt="" /></a>
+          <br> <br>
+          <br> 
           <h3>Contact</h3>
-          <p><b>Address:</b> Wellington Road, Street 32. San Francisco</p>
-          <p><b>Phone:</b> +01 2222 365</p>
-          <p><b>Hours:</b> 10:00 - 18:00. Mon - Sat</p>
+          <address>
+            <p><b>Address:</b> Wellington Road, Street 32. San Francisco</p>
+            <p><b>Phone:</b> Wellington Road, Street 32. San Francisco</p>
+            <p><b>Hours</b> 10:00 - 18:00. Mon - Sat</p>
+          </address>
+          <h3>Follow Us</h3>
+          <br> 
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
         </div>
-
         <div class="about">
           <h3>About</h3>
+          <br> 
           <a href="#">About Us</a>
           <a href="#">Delivery Information</a>
           <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Terms & Conditions</a>
           <a href="#">Contact Us</a>
         </div>
-
-        <div class="myaccount">
-          <h3>My Account</h3>
+        <div class="myaccount ">
+          <h3>My account</h3>
+          <br> 
           <a href="#">Sign In</a>
-          <a href="#">View Cart</a>
-          <a href="#">My Wishlist</a>
+          <a href="cart.html">View Cart</a>
+          <a href="wishlist.html">My Wishlist</a>
           <a href="#">Track My Order</a>
           <a href="#">Help</a>
         </div>
-
         <div class="install">
           <h3>Install App</h3>
+          <br> 
           <p>From App Store or Google Play</p>
-          <img src="images/pay/app.jpg">
-          <img src="images/pay/play.jpg">
+          <div class="download">
+            <a href="#"><img src="images/pay/app.jpg" alt=""></a>
+            <a href="#"><img src="images/pay/play.jpg" alt=""></a>
+          </div>
+          <p>Secured Payment Gateways</p>
+          <img src="images/pay/pay.png" alt="">
         </div>
-
+        
       </div>
     </footer>
+
+
+      
+      
 
 
    <script src="../js/collection.js" defer=""></script>

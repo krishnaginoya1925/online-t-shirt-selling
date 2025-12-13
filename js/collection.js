@@ -47,3 +47,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ================= CART FUNCTIONALITY ================= */
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  document.querySelectorAll(".add-to-cart").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+
+      const id = btn.dataset.id;
+      const name = btn.dataset.name;
+      const price = Number(btn.dataset.price);
+      const img = btn.dataset.img;
+
+      const existing = cart.find(item => item.id === id);
+
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ id, name, price, img, qty: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Product added to cart 🛒");
+    });
+  });
+
+});
+

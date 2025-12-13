@@ -1,69 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  const container = document.getElementById("cartContainer");
+  const totalPriceEl = document.getElementById("totalPrice");
+
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  // =======================
-  // CART COUNT
-  // =======================
-  const cartCount = document.getElementById("cartCount");
-  if (cartCount) {
-    cartCount.innerText = cart.length;
-  }
+  function renderCart() {
+    container.innerHTML = "";
+    let total = 0;
 
-  const cartTable = document.getElementById("cartTable");
-  const totalEl = document.getElementById("total");
-  const emptyMsg = document.getElementById("emptyCart");
+    if (cart.length === 0) {
+      container.innerHTML = "<p>Your cart is empty 😢</p>";
+      totalPriceEl.textContent = "0";
+      return;
+    }
 
-  // =======================
-  // EMPTY CART
-  // =======================
-  if (cart.length === 0) {
-    cartTable.style.display = "none";
-    totalEl.style.display = "none";
-    emptyMsg.style.display = "block";
-    return;
-  }
+    cart.forEach((item, index) => {
+      total += item.price * item.qty;
 
-  cartTable.style.display = "table";
-  totalEl.style.display = "block";
-  emptyMsg.style.display = "none";
-
-  let total = 0;
-
-  cart.forEach((item, index) => {
-
-    // ✅ SAFELY PARSE PRICE
-    let price = parseFloat(item.price);
-
-    if (isNaN(price)) price = 0; // fallback safety
-
-    const row = cartTable.insertRow();
-
-    row.innerHTML = `
-      <td>
-        <div style="display:flex;align-items:center;gap:15px;justify-content:center;">
-          <img src="${item.img}" width="60" style="border-radius:8px;">
-          <span>${item.name}</span>
+      container.innerHTML += `
+        <div class="cart-item">
+          <img src="${item.img}">
+          <div class="cart-info">
+            <h3>${item.name}</h3>
+            <p>Price: $${item.price}</p>
+            <p>Qty: ${item.qty}</p>
+            <button onclick="removeItem(${index})">Remove</button>
+          </div>
         </div>
-      </td>
-      <td>$${price}</td>
-      <td>
-        <button onclick="removeItem(${index})">Remove</button>
-      </td>
-    `;
+      `;
+    });
 
-    total += price;
-  });
+    totalPriceEl.textContent = total;
+  }
 
-  totalEl.innerText = `Total: $${total}`;
+  window.removeItem = index => {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+  };
+
+  renderCart();
 });
-
-// =======================
-// REMOVE ITEM
-// =======================
-function removeItem(index) {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.splice(index, 1);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  location.reload();
-}
