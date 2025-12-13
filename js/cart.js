@@ -1,65 +1,69 @@
-// =======================
-// GET CART FROM STORAGE
-// =======================
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+document.addEventListener("DOMContentLoaded", () => {
 
-// =======================
-// ADD PRODUCT TO CART
-// =======================
-document.querySelectorAll(".add-to-cart").forEach(btn => {
-    btn.addEventListener("click", function (e) {
-        e.preventDefault();
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        let product = {
-            id: this.dataset.id,
-            name: this.dataset.name,
-            price: this.dataset.price
-        };
+  // =======================
+  // CART COUNT
+  // =======================
+  const cartCount = document.getElementById("cartCount");
+  if (cartCount) {
+    cartCount.innerText = cart.length;
+  }
 
-        cart.push(product);
-        localStorage.setItem("cart", JSON.stringify(cart));
+  const cartTable = document.getElementById("cartTable");
+  const totalEl = document.getElementById("total");
+  const emptyMsg = document.getElementById("emptyCart");
 
-        // open cart page
-        window.location.href = "cart.html";
-    });
+  // =======================
+  // EMPTY CART
+  // =======================
+  if (cart.length === 0) {
+    cartTable.style.display = "none";
+    totalEl.style.display = "none";
+    emptyMsg.style.display = "block";
+    return;
+  }
+
+  cartTable.style.display = "table";
+  totalEl.style.display = "block";
+  emptyMsg.style.display = "none";
+
+  let total = 0;
+
+  cart.forEach((item, index) => {
+
+    // ✅ SAFELY PARSE PRICE
+    let price = parseFloat(item.price);
+
+    if (isNaN(price)) price = 0; // fallback safety
+
+    const row = cartTable.insertRow();
+
+    row.innerHTML = `
+      <td>
+        <div style="display:flex;align-items:center;gap:15px;justify-content:center;">
+          <img src="${item.img}" width="60" style="border-radius:8px;">
+          <span>${item.name}</span>
+        </div>
+      </td>
+      <td>$${price}</td>
+      <td>
+        <button onclick="removeItem(${index})">Remove</button>
+      </td>
+    `;
+
+    total += price;
+  });
+
+  totalEl.innerText = `Total: $${total}`;
 });
 
 // =======================
-// UPDATE CART COUNT
-// =======================
-const cartCount = document.getElementById("cartCount");
-if (cartCount) {
-    cartCount.innerText = cart.length;
-}
-
-// =======================
-// DISPLAY PRODUCTS ON CART PAGE
-// =======================
-const cartTable = document.getElementById("cartTable");
-
-if (cartTable) {
-    let total = 0;
-
-    cart.forEach((item, index) => {
-        let row = cartTable.insertRow();
-
-        row.insertCell(0).innerText = item.name;
-        row.insertCell(1).innerText = "$" + item.price;
-
-        row.insertCell(2).innerHTML =
-            `<button onclick="removeItem(${index})">Remove</button>`;
-
-        total += parseInt(item.price);
-    });
-
-    document.getElementById("total").innerText = "Total: $" + total;
-}
-
-// =======================
-// REMOVE PRODUCT
+// REMOVE ITEM
 // =======================
 function removeItem(index) {
-    cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    location.reload();
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  location.reload();
 }

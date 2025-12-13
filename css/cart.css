@@ -108,6 +108,11 @@ body {
     font-weight: bold;
 }
 
+#emptyCart {
+  font-size: 26px;
+  font-weight: 600;
+}
+
 
 #header {
   display: flex;
