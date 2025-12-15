@@ -1,106 +1,94 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const accountBtn = document.getElementById("accountBtn");
+
+  /* ================= ACCOUNT DROPDOWN ================= */
+  const accountBtn = document.getElementById("accountBtn");
   const dropdown = document.getElementById("accountDropdown");
 
-  accountBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle("show");
-  });
+  if (accountBtn) {
+    accountBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle("show");
+    });
 
-  // Close dropdown when clicking outside
-  document.addEventListener("click", () => {
-    dropdown.classList.remove("show");
-  });
+    document.addEventListener("click", () => {
+      dropdown.classList.remove("show");
+    });
+  }
 
-  // Logout action
-  document.getElementById("logoutBtn").addEventListener("click", () => {
+  document.getElementById("logoutBtn")?.addEventListener("click", () => {
     alert("Logged out successfully");
-    // localStorage.clear(); // if using login system
   });
 
-    // Load wishlist safely
-    let wishlistData = JSON.parse(localStorage.getItem("wishlist")) || [];
-    let container = document.getElementById("wishlistBox");
+  /* ================= WISHLIST ================= */
+  let wishlistData = JSON.parse(localStorage.getItem("wishlist")) || [];
+  const container = document.getElementById("wishlistBox");
 
-    if (!container) return;
+  if (!container) return;
 
-    // ---------------- LOAD WISHLIST ----------------
-    function loadWishlist() {
-        container.innerHTML = "";
+  function loadWishlist() {
+    container.innerHTML = "";
 
-        if (wishlistData.length === 0) {
-            container.innerHTML =
-                "<h2 style='grid-column:1/-1; text-align:center;'>No items in wishlist</h2>";
-            return;
-        }
-
-        wishlistData.forEach(item => {
-            let price = Number(item.price);
-            if (isNaN(price)) price = 0; // safety
-
-            container.innerHTML += `
-                <div class="wishlist-item" id="item-${item.id}">
-                    <img src="${item.img}" alt="${item.name}">
-                    <h3>${item.name}</h3>
-                    <p>₹ ${price}</p>
-
-                    <div class="btn-row">
-                        <button class="remove-btn" onclick="removeItem('${item.id}')">
-                            Remove
-                        </button>
-                        <button class="cart-btn" onclick="moveToCart('${item.id}')">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            `;
-        });
+    if (wishlistData.length === 0) {
+      container.innerHTML =
+        "<h2 style='grid-column:1/-1;text-align:center;'>No items in wishlist</h2>";
+      return;
     }
 
-    // ---------------- REMOVE FROM WISHLIST ----------------
-    window.removeItem = function (id) {
-        wishlistData = wishlistData.filter(item => item.id !== id);
-        localStorage.setItem("wishlist", JSON.stringify(wishlistData));
+    wishlistData.forEach(item => {
+      const price = Number(item.price) || 0;
 
-        const el = document.getElementById("item-" + id);
-        if (el) el.remove();
+      container.innerHTML += `
+        <div class="wishlist-item" id="item-${item.id}">
+          <img src="${item.img}" alt="${item.name}">
+          <h3>${item.name}</h3>
+          <p>$ ${price}</p>
 
-        if (wishlistData.length === 0) {
-            container.innerHTML =
-                "<h2 style='grid-column:1/-1; text-align:center;'>No items in wishlist</h2>";
-        }
-    };
+          <div class="btn-row">
+            <button class="remove-btn" onclick="removeItem('${item.id}')">
+              Remove
+            </button>
+            <button class="cart-btn" onclick="moveToCart('${item.id}')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      `;
+    });
+  }
 
-    // ---------------- MOVE TO CART ----------------
-    window.moveToCart = function (id) {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-        let selectedItem = wishlistData.find(item => item.id === id);
-        if (!selectedItem) return;
-
-        let price = Number(selectedItem.price);
-        if (isNaN(price)) price = 0; // safety fallback
-
-        let existingItem = cart.find(item => item.id === id);
-
-        if (existingItem) {
-            existingItem.qty += 1;
-        } else {
-            cart.push({
-                id: selectedItem.id,
-                name: selectedItem.name,
-                price: price,
-                img: selectedItem.img,
-                qty: 1
-            });
-        }
-
-        localStorage.setItem("cart", JSON.stringify(cart));
-        alert("Item added to cart 🛒");
-
-        removeItem(id); // auto remove from wishlist
-    };
-
-    // Initial load
+  /* ================= REMOVE FROM WISHLIST ================= */
+  window.removeItem = function (id) {
+    wishlistData = wishlistData.filter(item => item.id !== id);
+    localStorage.setItem("wishlist", JSON.stringify(wishlistData));
     loadWishlist();
+  };
+
+  /* ================= ADD TO CART + REDIRECT ================= */
+window.moveToCart = function (id) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const item = wishlistData.find(i => i.id === id);
+  if (!item) return;
+
+  // Check if already in cart (optional safety)
+  const alreadyInCart = cart.find(c => c.id === item.id);
+  if (!alreadyInCart) {
+    cart.push({
+      id: item.id,
+      name: item.name,
+      price: Number(item.price),
+      img: item.img
+    });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("Item added to cart");
+
+
+
+  // Redirect to cart page
+  window.location.href = "cart.html";
+};
+
+  loadWishlist();
 });

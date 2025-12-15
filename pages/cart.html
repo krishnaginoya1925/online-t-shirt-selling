@@ -25,8 +25,7 @@
               <li><a  href="index.html">Home</a></li>
               <li><a href="collection.html">Collection</a></li>
               <li><a href="category.html">Category</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
           </nav>
           <header class="header-icons">
@@ -61,11 +60,69 @@
 
 <h1 class="title">Shopping Cart</h1>
 
-<div class="cart-container" id="cartContainer"></div>
+<!-- <div class="cart-container" id="cartContainer"></div>
 
 <div class="cart-summary">
   <h2>Total: $<span id="totalPrice">0</span></h2>
+</div> -->
+
+<!-- CART ITEM -->
+<div class="cart-container">
+
+  <div class="cart-item">
+    <div class="product-img">
+      <img src="../images/products/f6.jpg" alt="Product">
+    </div>
+
+    <div class="product-details">
+      <h3>Cartoon Astronaut T-Shirts</h3>
+      <p class="price">$<span id="price">78</span></p>
+
+      <!-- Quantity -->
+      <div class="qty-box">
+        <button onclick="decreaseQty()">−</button>
+        <span id="qty">1</span>
+        <button onclick="increaseQty()">+</button>
+      </div>
+
+      <!-- Buttons -->
+      <div class="action-btns">
+        <button class="remove-btn" onclick="removeItem()">Remove</button>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<!-- PAYMENT SUMMARY -->
+<div class="summary-box">
+  <h2>Payment Summary</h2>
+
+  <div class="summary-row">
+    <span>Subtotal</span>
+    <span>$<span id="subtotal">78.00</span></span>
+  </div>
+
+  <div class="summary-row">
+    <span>GST (18%)</span>
+    <span>$<span id="gst">14.04</span></span>
+  </div>
+
+  <div class="summary-row">
+    <span>Delivery Charges</span>
+    <span>$10.00</span>
+  </div>
+
+  <hr>
+
+  <div class="summary-row total">
+    <span>Total Amount</span>
+    <span>$<span id="total">102.04</span></span>
+  </div>
+</div>
+
+
+
 <!-- NEWSLETTER -->
       <section id="newsletter">
         <div class="newsletter-text">

@@ -2,40 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in Form</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <title>Login | VastraHub</title>
 
-    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body>
 
-    <div class="wrapper">
-    <form action="login" method="post">
+<div id="header"></div>
 
+<section class="auth-section">
+    <div class="auth-box">
         <h2>Login</h2>
 
-        <div class="input-box">
-            <input type="text" id="username" name="username" placeholder="username" required>
-            <i class='bx bx-user'></i>
+        <!-- ✅ ADD ID HERE -->
+        <form id="loginForm">
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
 
-        </div>
-        <div class="input-box">
-            <input type="password" placeholder="password" required>
-            <i class='bxr  bx-lock'  ></i> 
-        </div>
-        <div class="remember-forget">
-            <label><input type="checkbox">Remember me</label>
-            <a href="forgot_password.html">Forget password?</a>
-        </div>
-        
-        <button type="button" class="btn" onclick="window.location.href='index.html'">Log in</button>
+            <button type="submit" class="btn">Sign In</button>
+        </form>
 
-
-        <div class="register-link">
-            <p>Don't have an account? <a href="registration.html">Register</a></p>
-        </div>
-    </form>
+        <p class="auth-text">
+            Don’t have an account?
+            <a href="registration.html">Register</a>
+        </p>
     </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop page refresh
+    window.location.href = "index.html"; // redirect
+});
+</script>
+
 </body>
 </html>
