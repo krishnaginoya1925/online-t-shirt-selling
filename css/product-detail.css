@@ -1,0 +1,110 @@
+/*--------- product detail------------ */
+/* Image section */
+.image-section {
+  width: 50%;
+  display: flex;
+  gap: 15px;
+  background: white;
+  justify-content: center;
+}
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 15px 0 15px 10px;
+}
+
+.thumbnails img {
+  height: 100px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.main-image img {
+  margin: 15px 0;
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* products info */
+.product-info {
+  width: 50%;
+  background: white;
+}
+
+.pro-info {
+  margin: 30px 0 15px 0;
+  padding: 10px;
+}
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.product-title {
+  color: #555;
+  margin: 5px 0;
+}
+
+.rating {
+  color: green;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.tax {
+  color: green;
+  font-size: 14px;
+}
+
+.size-title {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.size-box {
+  display: flex;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.size-box button {
+  background: #fff;
+  border: 1px solid var(--primary);
+  padding: 6px 10px;
+  color: var(--primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.size-box button:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.size-box button.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.cart-btn {
+  text-align: center;
+  width: 46%;
+  position: relative;
+}
+
+.wishlst-btn {
+  text-align: center;
+  width: 46%;
+  position: relative;
+}

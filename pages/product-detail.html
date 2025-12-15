@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VastraHub | Men</title>
+
+    <!-- global css -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- product page css -->
+    <link rel="stylesheet" href="../css/product-detail.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<section>
+    <div class="pro-container">
+       
+        <!-- Image -->
+        <div class="image-section">
+         <div class="thumbnails">
+            <img src="../images/products/n5.jpg" onclick="changeImg(this)">
+            <img src="../images/products/n1.jpg" onclick="changeImg(this)">
+            <img src="../images/products/n2.jpg" onclick="changeImg(this)">
+         </div>
+
+         <div class="main-image">
+            <img id="mainImg" src="../images/products/n5.jpg">
+         </div>
+        </div>
+         <!-- Product Info -->
+        <div class="product-info">
+            <div class="pro-info">
+            <div class="brand">H&M</div>
+            <div class="product-title">Fine-knit one-shoulder top</div>
+
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.8 | 319 Ratings</div>
+
+          <div class="price">
+            ₹4330 
+            </div>
+
+            <div class="tax">inclusive of all taxes</div>
+
+            <div class="size-title">
+            SELECT SIZE <span style="color:red;font-size:12px;">SIZE CHART</span>
+            </div>
+
+            <div class="size-box">
+            <button onclick="selectSize(this)">XS</button>
+            <button onclick="selectSize(this)">S</button>
+            <button onclick="selectSize(this)">M</button>
+            <button onclick="selectSize(this)">L</button>
+            <button onclick="selectSize(this)">XL</button>
+            </div>
+            </div>
+            <div class="buttons">
+            <a href="cart.html" class="btn cart-btn">  <i class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+            <a href="wishlist.html" class="btn wishlst-btn"><i class="fa-solid fa-heart"></i> Wishlist</a>
+           
+            
+            </div>
+        </div>
+    
+    </div>
+    
+</section>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<script>
+    /* load header */
+    fetch("header.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+
+    /* Image  */
+function changeImg(img) {
+    document.getElementById("mainImg").src = img.src;
+}
+
+function selectSize(btn) {
+    document.querySelectorAll(".size-box button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+}
+    /* load footer */
+    fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+</body>
+</html>
