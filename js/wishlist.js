@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const accountBtn = document.getElementById("accountBtn");
+  const dropdown = document.getElementById("accountDropdown");
+
+  accountBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle("show");
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", () => {
+    dropdown.classList.remove("show");
+  });
+
+  // Logout action
+  document.getElementById("logoutBtn").addEventListener("click", () => {
+    alert("Logged out successfully");
+    // localStorage.clear(); // if using login system
+  });
 
     // Load wishlist safely
     let wishlistData = JSON.parse(localStorage.getItem("wishlist")) || [];

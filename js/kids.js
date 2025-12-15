@@ -1,11 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // focus email input
-  const emailField = document.getElementById("email-address-input");
-  if (emailField) {
-    emailField.focus({ preventScroll: true });
-  }
-
-  const accountBtn = document.getElementById("accountBtn");
+    const accountBtn = document.getElementById("accountBtn");
   const dropdown = document.getElementById("accountDropdown");
 
   accountBtn.addEventListener("click", (e) => {
@@ -23,10 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Logged out successfully");
     // localStorage.clear(); // if using login system
   });
-
-
-
- 
 
   const wishBtns = document.querySelectorAll(".wishlist-btn");
 

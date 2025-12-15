@@ -141,29 +141,6 @@ body {
   display: block;
 }
 
-
-/* Cart count bubble */
-.cart-box {
-    position: relative;
-}
-
-.cart-count {
-    position: absolute;
-    top: -10px;
-    left: 8px;
-    background: orange;
-    color: white;
-    font-size: 12px;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-
 #header {
   display: flex;
   align-items: center;
@@ -222,172 +199,123 @@ body {
   bottom: -4px;
   left: 20px;
 }
+
+
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --primary: #111;
+  --border-soft: #ededed;
+  --light-bg: #fafafa;
+}
+
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #fff;
-    margin: 0;
-    padding: 20px;
+  background: #fff;
+    padding-top: 90px;
 }
 
-.title {
-    text-align: center;
-    margin-bottom: 30px;
-   
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-.wishlist-container {
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+/* ================= PROFILE LAYOUT ================= */
+.profile-layout {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
 }
 
-.wishlist-item {
-    padding: 10px;
-    border-radius: 12px;
-    background: #f5f5f5;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* ================= SIDEBAR ================= */
+.profile-sidebar {
+  width: 260px;
+  background: #fff;
+  border: 1px solid var(--border-soft);
 }
 
-.wishlist-item img {
-    width: 100%;
-    border-radius: 10px;
+.profile-sidebar ul {
+  list-style: none;
 }
 
-.remove-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: crimson;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.remove-btn:hover {
-    background: darkred;
-}
-.btn-row {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-.btn-box {
-    display: flex;
-    width: 100%;
-    gap: 15px; /* space between buttons */
-    margin-top: 20px;
-}
-
-.btn-box button {
-    flex: 1; /* both buttons equal width */
-    padding: 14px 0;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.cart-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: crimson;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.cart-btn:hover {
-    background: #066b62;
-}
-
-/* newsletter section styles */
-
-#newsletter {
-  background-image: url(../images/banner/b14.png);
-  background-repeat: no-repeat;
-  background-position: 180px;
-  background-color: #041e42;
-  height: 160px;
+.profile-sidebar ul li {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 75px;
-}
-#newsletter .newsletter-text h3 {
-  color: white;
-  font-size: 30px;
-  padding: 0 0 15px 0;
-}
-#newsletter .newsletter-text h5 {
-  color: rgb(151, 151, 151);
-  font-size: 17px;
-}
-#newsletter .newsletter-text h5 span {
-  color: rgb(216, 182, 29);
-}
-#newsletter .form input {
-  padding: 20px;
-  width: 350px;
-  height: 56px;
-  background-color: #d1d0d0;
-  border-radius: 6px 0 0 6px;
-  font-size: 18px;
-
-  border: none;
-  outline: none;
-  margin-right: -4px;
-  margin-top: 1px;
-}
-#newsletter .form button {
-  margin-left: 0;
-  padding: 20px;
-  border: none;
-  width: 120px;
-  background-color: #088178;
-  color: white;
-  font-size: 17px;
-  border-radius: 0 6px 6px 0;
+  gap: 12px;
+  padding: 18px 20px;
+  font-size: 15px;
+  color: #111;
   cursor: pointer;
+  border-bottom: 1px solid var(--border-soft);
 }
 
-/* footer section styles */
+.profile-sidebar ul li i {
+  font-size: 16px;
+}
 
-#footer{
+/* ACTIVE ITEM */
+.profile-sidebar ul li.active {
+  background: #fbf8f3;
+  font-weight: 600;
+}
+
+/* HOVER */
+.profile-sidebar ul li:hover {
+  background: #f6f6f6;
+}
+
+/* LOGOUT */
+.profile-sidebar ul li.logout {
+  color: #d32f2f;
+}
+
+/* ================= MAIN CONTENT ================= */
+.profile-content {
+  flex: 1;
+}
+
+.profile-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* ================= PROFILE BOX ================= */
+.profile-box {
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  padding: 0 30px;
+}
+
+.info-row {
   display: flex;
-  align-items:flex-start;
   justify-content: space-between;
-  padding: 75px;
-  background-color: #ececec;
-}
-#footer div{
-}
-#footer p, #footer a{
-  color: rgb(109, 109, 109);
-  text-decoration: none;
-}
-#footer a:hover{
-  color:#088178;
-}
-#footer .about a{
-  display: block;
-  padding:8px 0;
-}
-#footer .myaccount a{
-  display: block;
-  padding:8px 0;
-}
-#footer .download img{
-  border: 1px solid #08817969;
-  border-radius: 7px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 15px;
 }
 
+.info-row span:first-child {
+  color: #111;
+}
 
+.info-row span:last-child {
+  color: #000;
+  font-weight: 500;
+}
+
+/* EDIT PROFILE LINK */
+.add-cart-btn {
+  display: inline-block;
+  margin: 20px 0;
+  color: #5a2dd8;
+  text-decoration: underline;
+  font-size: 14px;
+}
