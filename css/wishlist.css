@@ -230,8 +230,9 @@ body {
 }
 
 .title {
-    text-align: center;
-    margin-bottom: 30px;
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 50px;
    
 }
 
@@ -244,7 +245,7 @@ body {
 }
 
 .wishlist-item {
-    padding: 10px;
+    padding: 20px;
     border-radius: 12px;
     background: #f5f5f5;
     text-align: center;
@@ -254,12 +255,13 @@ body {
 .wishlist-item img {
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 18px;
 }
 
 .remove-btn {
     margin-top: 10px;
     padding: 10px 20px;
-    background: crimson;
+    background: rgb(0, 0, 0);
     color: white;
     border: none;
     cursor: pointer;
@@ -268,7 +270,8 @@ body {
 }
 
 .remove-btn:hover {
-    background: darkred;
+    background: rgb(255, 255, 255);
+  color: #000;
 }
 .btn-row {
     display: flex;
@@ -297,7 +300,7 @@ body {
 .cart-btn {
     margin-top: 10px;
     padding: 10px 20px;
-    background: crimson;
+    background: rgb(0, 0, 0);
     color: white;
     border: none;
     cursor: pointer;
@@ -306,12 +309,14 @@ body {
 }
 
 .cart-btn:hover {
-    background: #066b62;
+    background: #ffffff;
+    color: #000;
 }
 
 /* newsletter section styles */
 
 #newsletter {
+  margin-top: 80px;
   background-image: url(../images/banner/b14.png);
   background-repeat: no-repeat;
   background-position: 180px;

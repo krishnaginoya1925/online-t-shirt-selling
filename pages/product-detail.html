@@ -3,10 +3,7 @@
 <head>
     <title>VastraHub | Men</title>
 
-    <!-- global css -->
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
+    
 
     <!-- product page css -->
     <link rel="stylesheet" href="../css/product-detail.css">
@@ -15,60 +12,99 @@
 <body>
 
 <!-- HEADER -->
-<div id="header"></div>
+<!--header section-->
 
-<section>
-    <div class="pro-container">
-       
-        <!-- Image -->
-        <div class="image-section">
-         <div class="thumbnails">
-            <img src="../images/products/n5.jpg" onclick="changeImg(this)">
-            <img src="../images/products/n1.jpg" onclick="changeImg(this)">
-            <img src="../images/products/n2.jpg" onclick="changeImg(this)">
-         </div>
-
-         <div class="main-image">
-            <img id="mainImg" src="../images/products/n5.jpg">
-         </div>
+    <header>
+      <div id="header">
+        <div class="header-logo">
+          <a href="indext.html"><img src="../images/logo.png" alt="" /></a>
         </div>
-         <!-- Product Info -->
-        <div class="product-info">
-            <div class="pro-info">
-            <div class="brand">H&M</div>
-            <div class="product-title">Fine-knit one-shoulder top</div>
+        <div class="header-list">
+          <nav class="header-list-nav">
+            <ul>
+              <li><a  href="index.html">Home</a></li>
+              <li><a class="active" href="collection.html">Collection</a></li>
+              <li><a href="category.html">Category</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </nav>
+          <header class="header-icons">
+   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-            <div class="rating"><i class="fa-solid fa-star"></i> 4.8 | 319 Ratings</div>
+          <div class="header-list-icon">
+            <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
+          </div>
+           <div class="icon-box">
+  <a class="active" href="wishlist.html" class="wishlist-link" aria-label="Open wishlist">
+    <i class="fa-regular fa-heart"></i>
+  </a>
+</div>
+     <div class="account-container">
+  <div class="icon-box" id="accountBtn">
+    <i class="fa-solid fa-user"></i>
+  </div>
 
-          <div class="price">
-            ₹4330 
-            </div>
+  <!-- Dropdown -->
+  <div class="account-dropdown" id="accountDropdown">
+    <a href="profile.html">Profile</a>
+    <a href="login.html">Login</a>
+    <a href="#" id="logoutBtn">Logout</a>
+  </div>
+</div>
+     </div>
+      </div>
+</header>
+    </header>
 
-            <div class="tax">inclusive of all taxes</div>
-
-            <div class="size-title">
-            SELECT SIZE <span style="color:red;font-size:12px;">SIZE CHART</span>
-            </div>
-
-            <div class="size-box">
-            <button onclick="selectSize(this)">XS</button>
-            <button onclick="selectSize(this)">S</button>
-            <button onclick="selectSize(this)">M</button>
-            <button onclick="selectSize(this)">L</button>
-            <button onclick="selectSize(this)">XL</button>
-            </div>
-            </div>
-            <div class="buttons">
-            <a href="cart.html" class="btn cart-btn">  <i class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
-            <a href="wishlist.html" class="btn wishlst-btn"><i class="fa-solid fa-heart"></i> Wishlist</a>
-           
-            
-            </div>
-        </div>
+<section class="product-detail">
+  <div class="container pro-container">
     
+    <!-- Image -->
+    <div class="image-section">
+      <div class="thumbnails">
+        <img src="../images/products/men/m12(1).jpg" onclick="changeImg(this)">
+        <img src="../images/products//men/m12(2).jpg" onclick="changeImg(this)">
+        <img src="../images/products//men/m12(3).jpg" onclick="changeImg(this)">
+      </div>
+
+      <div class="main-image">
+        <img id="mainImg" src="../images/products/men/m12.jpg">
+      </div>
     </div>
-    
+
+    <!-- Product Info -->
+    <div class="product-info">
+      <div class="pro-info">
+        <div class="brand">H&M</div>
+        <div class="product-title">OVERSIZE INTERLOCK SWEATSHIRT GILET</div>
+        <div class="rating">⭐⭐⭐⭐☆ 4.8 | 319 Ratings</div>
+
+        <div class="price">$35</div>
+        <div class="tax">inclusive of all taxes</div>
+
+        <div class="size-title">
+          SELECT SIZE <span class="size-chart">SIZE CHART</span>
+        </div>
+
+        <div class="size-box">
+          <button onclick="selectSize(this)">XS</button>
+          <button onclick="selectSize(this)">S</button>
+          <button onclick="selectSize(this)">M</button>
+          <button onclick="selectSize(this)">L</button>
+          <button onclick="selectSize(this)">XL</button>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="cart.html" class="btn cart-btn">Add to Cart</a>
+        <a href="wishlist.html" class="btn wishlst-btn">Wishlist</a>
+      </div>
+    </div>
+
+  </div>
 </section>
+
 
 <!-- FOOTER -->
 <div id="footer"></div>

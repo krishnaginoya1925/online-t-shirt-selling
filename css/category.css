@@ -284,6 +284,7 @@ grid-template-columns: 1fr;
 }
 
 #newsletter {
+  margin-top: 80px;
   background-image: url(../images/banner/b14.png);
   background-repeat: no-repeat;
   background-position: 180px;

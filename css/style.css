@@ -500,53 +500,106 @@ span {
 
 /* newsletter section styles */
 
+/* ===== NEWSLETTER SECTION ===== */
 #newsletter {
+  background-color: #041e42;
   background-image: url(../images/banner/b14.png);
   background-repeat: no-repeat;
-  background-position: 180px;
-  background-color: #041e42;
-  height: 160px;
+  background-position: center;
+  background-size: cover;
+
+  height: 180px;
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 75px;
-}
-#newsletter .newsletter-text h3 {
-  color: white;
-  font-size: 30px;
-  padding: 0 0 15px 0;
-}
-#newsletter .newsletter-text h5 {
-  color: rgb(151, 151, 151);
-  font-size: 17px;
-}
-#newsletter .newsletter-text h5 span {
-  color: rgb(216, 182, 29);
-}
-#newsletter .form input {
-  padding: 20px;
-  width: 350px;
-  height: 56px;
-  background-color: #d1d0d0;
-  border-radius: 6px 0 0 6px;
-  font-size: 18px;
 
+  padding: 0 80px;
+}
+
+/* LEFT TEXT */
+#newsletter .newsletter-text {
+  max-width: 50%;
+}
+
+#newsletter .newsletter-text h3 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+#newsletter .newsletter-text h5 {
+  color: #cfcfcf;
+  font-size: 16px;
+}
+
+#newsletter .newsletter-text h5 span {
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+/* RIGHT FORM */
+#newsletter .form {
+  display: flex;
+  align-items: center;
+}
+
+#newsletter .form input {
+  height: 56px;
+  width: 380px;
+  padding: 0 20px;
+
+  background-color: #dcdcdc;
   border: none;
   outline: none;
-  margin-right: -4px;
-  margin-top: 1px;
+
+  font-size: 16px;
+  border-radius: 6px 0 0 6px;
 }
+
 #newsletter .form button {
-  margin-left: 0;
-  padding: 20px;
+  height: 56px;
+  width: 140px;
+
   border: none;
-  width: 120px;
   background-color: #088178;
-  color: white;
-  font-size: 17px;
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 500;
+
   border-radius: 0 6px 6px 0;
   cursor: pointer;
 }
+
+#newsletter .form button:hover {
+  background-color: #066d66;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  #newsletter {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    height: auto;
+    gap: 20px;
+  }
+
+  #newsletter .newsletter-text {
+    max-width: 100%;
+  }
+
+  #newsletter .form {
+    width: 100%;
+  }
+
+  #newsletter .form input {
+    width: 100%;
+  }
+}
+
 
 /* footer section styles */
 
