@@ -95,3 +95,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+/* ================== PRODUCT-DETAIL =====================*/
+
+  document.querySelectorAll(".product-cart").forEach(card => {
+    card.addEventListener("click", function (e) {
+
+      // Prevent redirect when clicking buttons or icons
+      if (
+        e.target.closest(".cart-btn") ||
+        e.target.closest(".wishlist-btn")
+      ) {
+        return;
+      }
+
+      const link = this.getAttribute("data-link");
+      if (link) {
+        window.location.href = link;
+      }
+    });
+  });

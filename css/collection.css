@@ -376,6 +376,17 @@ body {
   bottom: 10px;
   
 }
+
+.product-cart {
+  cursor: pointer;
+}
+
+.product-cart .action-box {
+  cursor: default;
+}
+
+
+
 /* .action-box {
   display: flex;
   align-items: center;
