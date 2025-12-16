@@ -430,3 +430,141 @@ body {
   opacity: 1;
 }
 
+/* RESPONSIVE */
+
+/* =========================
+   RESPONSIVE STYLES
+========================= */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+
+  #header {
+    padding: 15px 40px;
+  }
+
+  .header-list-nav ul li {
+    padding: 0 12px;
+  }
+
+  .contact-container {
+    padding: 40px;
+    gap: 30px;
+  }
+
+  #newsletter {
+    padding: 0 40px;
+  }
+
+  #footer {
+    padding: 50px;
+    gap: 30px;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  #header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .header-list-nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* HERO */
+  .contact-hero {
+    padding: 40px 15px;
+  }
+
+  .contact-hero h1 {
+    font-size: 30px;
+  }
+
+  /* CONTACT SECTION */
+  .contact-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  /* NEWSLETTER */
+  #newsletter {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  #newsletter .form {
+    width: 100%;
+    display: flex;
+  }
+
+  #newsletter .form input {
+    width: 70%;
+    font-size: 16px;
+  }
+
+  #newsletter .form button {
+    width: 30%;
+    font-size: 16px;
+  }
+
+  /* FOOTER */
+  #footer {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 25px;
+  }
+}
+
+/* Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  #newsletter .newsletter-text h3 {
+    font-size: 22px;
+  }
+
+  #newsletter .newsletter-text h5 {
+    font-size: 14px;
+  }
+
+  #newsletter .form {
+    flex-direction: column;
+  }
+
+  #newsletter .form input,
+  #newsletter .form button {
+    width: 100%;
+    border-radius: 6px;
+    margin: 5px 0;
+  }
+}

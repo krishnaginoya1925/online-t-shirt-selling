@@ -627,3 +627,191 @@ span {
   border-radius: 7px;
 }
 
+/* Responsive */
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+
+  #header {
+    padding: 15px 40px;
+  }
+
+  #hero {
+    padding: 0 40px;
+  }
+
+  #hero h1,
+  #hero h2 {
+    font-size: 50px;
+  }
+
+  #features {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .product-section .pro-collection {
+    margin: 0 30px;
+    justify-content: center;
+  }
+
+  #banners {
+    margin: 0 30px;
+  }
+
+  #banners .big-banners {
+    flex-direction: column;
+  }
+
+  #banners .big-banners div {
+    min-width: 100%;
+  }
+
+  #newsletter {
+    padding: 0 40px;
+  }
+
+  #footer {
+    padding: 50px;
+    gap: 30px;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  #header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .header-list-nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* HERO */
+  #hero {
+    height: auto;
+    padding: 120px 20px 60px;
+    align-items: center;
+    text-align: center;
+  }
+
+  #hero h1,
+  #hero h2 {
+    font-size: 40px;
+  }
+
+  #hero h4 {
+    font-size: 22px;
+  }
+
+  /* FEATURES */
+  #features {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* PRODUCTS */
+  .product-section .pro-collection {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .product-section .product-cart {
+    width: 90%;
+  }
+
+  /* BANNERS */
+  #banners .small-banners {
+    flex-direction: column;
+  }
+
+  #banners .small-banners div {
+    min-width: 100%;
+  }
+
+  /* NEWSLETTER */
+  #newsletter {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  #newsletter .form {
+    display: flex;
+    width: 100%;
+  }
+
+  #newsletter .form input {
+    width: 70%;
+    font-size: 16px;
+  }
+
+  #newsletter .form button {
+    width: 30%;
+    font-size: 16px;
+  }
+
+  /* FOOTER */
+  #footer {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 25px;
+  }
+}
+
+/* Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  #hero h1,
+  #hero h2 {
+    font-size: 32px;
+  }
+
+  #newsletter .newsletter-text h3 {
+    font-size: 22px;
+  }
+
+  #newsletter .newsletter-text h5 {
+    font-size: 14px;
+  }
+
+  #newsletter .form {
+    flex-direction: column;
+  }
+
+  #newsletter .form input,
+  #newsletter .form button {
+    width: 100%;
+    border-radius: 6px;
+    margin: 5px 0;
+  }
+
+  .product-section .product-cart {
+    width: 95%;
+  }
+}

@@ -305,6 +305,7 @@ body {
   border-radius: 7px;
 }
 
+
 /* cart item */
 /* ===== CART PAGE BACKGROUND ===== */
 body {
@@ -451,3 +452,162 @@ body {
 .checkout-btn:hover {
   transform: translateY(-2px);
 }
+
+
+/* responsive */
+
+/* ===============================
+   MOBILE & TABLET RESPONSIVE
+================================ */
+
+/* ---------- LARGE TABLETS (≤1024px) ---------- */
+@media (max-width: 1024px) {
+
+  #header {
+    padding: 15px 40px;
+  }
+
+  .cart-layout {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .cart-right {
+    margin-top: 30px;
+  }
+
+  #footer {
+    padding: 60px 40px;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  #footer > div {
+    flex: 1 1 45%;
+  }
+}
+
+/* ---------- TABLETS (≤768px) ---------- */
+@media (max-width: 768px) {
+
+  /* Header */
+  #header {
+    padding: 14px 25px;
+  }
+
+  .header-list-nav ul li {
+    padding: 0 12px;
+  }
+
+  /* Cart layout */
+  .cart-layout {
+    padding: 20px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-img img {
+    width: 100px;
+  }
+
+  .qty-box {
+    margin-top: 10px;
+  }
+
+  /* Footer */
+  #footer {
+    flex-direction: column;
+    padding: 50px 30px;
+  }
+
+  #footer > div {
+    width: 100%;
+  }
+}
+
+/* ---------- MOBILE (≤576px) ---------- */
+@media (max-width: 576px) {
+
+  /* Header */
+  #header {
+    padding: 12px 18px;
+  }
+
+  .header-list-nav {
+    display: none; /* hide menu (no hamburger yet) */
+  }
+
+  .header-icons {
+    gap: 14px;
+    padding-right: 0;
+  }
+
+  /* Title */
+  .title {
+    font-size: 28px;
+    margin: 110px 0 30px;
+    padding: 0 10px;
+  }
+
+  /* Cart */
+  .cart-layout {
+    padding: 15px;
+  }
+
+  .cart-item {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .product-img img {
+    width: 100%;
+    max-width: 140px;
+  }
+
+  .product-details h3 {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .qty-box {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .checkout-btn {
+    width: 100%;
+  }
+
+  /* Footer */
+  #footer {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  #footer .socials {
+    justify-content: center;
+  }
+}
+
+/* ---------- VERY SMALL DEVICES (≤360px) ---------- */
+@media (max-width: 360px) {
+
+  .product-details h3 {
+    font-size: 15px;
+  }
+
+  .summary-box h3 {
+    font-size: 18px;
+  }
+
+  .checkout-btn {
+    font-size: 14px;
+  }
+}
+

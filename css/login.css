@@ -78,3 +78,60 @@
 .auth-text a:hover {
   text-decoration: underline;
 }
+
+/* Responsive */
+
+/* ===============================
+   RESPONSIVE AUTH PAGE
+================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .auth-box {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .auth-box h2 {
+    font-size: 22px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .auth-box {
+    width: 95%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .auth-box h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .auth-box input {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .auth-box .btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .auth-text {
+    font-size: 13px;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+  .auth-box {
+    padding: 16px;
+  }
+
+  .auth-box h2 {
+    font-size: 18px;
+  }
+}

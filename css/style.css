@@ -653,3 +653,197 @@ span {
   border: 1px solid #08817969;
   border-radius: 7px;
 }
+
+/* Responsive */
+
+/* ================================
+   RESPONSIVE CSS
+================================ */
+
+/* ---------- Large Laptops (1200px and below) ---------- */
+@media (max-width: 1200px) {
+  #header {
+    padding: 20px 40px;
+  }
+
+  #hero {
+    padding: 0 40px;
+  }
+
+  #banners {
+    margin: 0 30px;
+  }
+
+  .product-section .pro-collection {
+    margin: 0 30px;
+  }
+
+  #footer {
+    padding: 60px 40px;
+  }
+}
+
+/* ---------- Tablets (992px and below) ---------- */
+@media (max-width: 992px) {
+  h1 { font-size: 42px; }
+  h2 { font-size: 36px; }
+
+  /* Header */
+  #header {
+    padding: 15px 25px;
+  }
+
+  .header-list-nav ul li {
+    padding: 0 12px;
+  }
+
+  /* Hero */
+  #hero {
+    height: 80vh;
+    padding: 0 25px;
+  }
+
+  #hero h1,
+  #hero h2 {
+    font-size: 52px;
+  }
+
+  /* Features */
+  #features {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Products */
+  .product-section .pro-collection {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Banners */
+  #banners .big-banners {
+    flex-direction: column;
+  }
+
+  #banners .big-banners div {
+    min-width: 100%;
+  }
+
+  #banners .small-banners {
+    flex-wrap: wrap;
+  }
+
+  #banners .small-banners div {
+    min-width: 45%;
+  }
+
+  /* Footer */
+  #footer {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+/* ---------- Mobile Devices (768px and below) ---------- */
+@media (max-width: 768px) {
+  h1 { font-size: 36px; }
+  h2 { font-size: 30px; }
+  p { font-size: 15px; }
+
+  /* Header */
+  #header {
+    padding: 15px 20px;
+  }
+
+  .header-list-nav ul {
+    display: none; /* mobile menu later if needed */
+  }
+
+  /* Hero */
+  #hero {
+    height: 70vh;
+    padding: 0 20px;
+  }
+
+  #hero h1,
+  #hero h2 {
+    font-size: 42px;
+  }
+
+  #hero h4 {
+    font-size: 24px;
+  }
+
+  #hero button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  /* Features */
+  #features .f-box {
+    width: 45%;
+  }
+
+  /* Products */
+  .product-section .product-cart {
+    width: 90%;
+  }
+
+  /* Off banner */
+  #off-banner {
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* Newsletter */
+  #newsletter {
+    padding: 30px 20px;
+    background-position: center;
+  }
+
+  #newsletter .form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #newsletter .form input {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  #newsletter .form button {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  /* Footer */
+  #footer {
+    padding: 40px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ---------- Small Mobile (480px and below) ---------- */
+@media (max-width: 480px) {
+  h1 { font-size: 30px; }
+  h2 { font-size: 26px; }
+
+  /* Features */
+  #features .f-box {
+    width: 100%;
+  }
+
+  /* Products */
+  .product-section .product-cart {
+    width: 100%;
+  }
+
+  /* Banners */
+  #banners .small-banners div {
+    min-width: 100%;
+  }
+}

@@ -401,3 +401,195 @@ body {
 }
 
 
+/* Responsive */
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* ----------- Tablets (max-width: 1024px) ----------- */
+@media (max-width: 1024px) {
+
+  #header {
+    padding: 16px 40px;
+  }
+
+  .wishlist-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #newsletter {
+    padding: 0 40px;
+    background-position: center;
+  }
+
+  #footer {
+    padding: 60px 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+
+/* ----------- Tablets & Small Laptops (max-width: 900px) ----------- */
+@media (max-width: 900px) {
+
+  .wishlist-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #newsletter {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 30px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  #newsletter .form {
+    display: flex;
+    justify-content: center;
+  }
+
+  #newsletter .form input {
+    width: 260px;
+  }
+}
+
+
+/* ----------- Mobile (max-width: 768px) ----------- */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  #header {
+    padding: 14px 20px;
+  }
+
+  .header-list-nav {
+    display: none; /* hide desktop menu */
+  }
+
+  .header-icons {
+    padding-right: 0;
+    gap: 16px;
+  }
+
+  /* TITLES */
+  h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  /* WISHLIST GRID */
+  .wishlist-container {
+    width: 100%;
+    padding: 0 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wishlist-item {
+    padding: 15px;
+  }
+
+  .wishlist-item img {
+    margin-bottom: 12px;
+  }
+
+  .btn-box {
+    flex-direction: column;
+  }
+
+  .btn-box button {
+    width: 100%;
+  }
+
+  /* NEWSLETTER */
+  #newsletter {
+    margin-top: 60px;
+    padding: 30px 20px;
+  }
+
+  #newsletter .newsletter-text h3 {
+    font-size: 24px;
+  }
+
+  #newsletter .newsletter-text h5 {
+    font-size: 15px;
+  }
+
+  #newsletter .form {
+    width: 100%;
+  }
+
+  #newsletter .form input {
+    width: 100%;
+    border-radius: 6px;
+    margin-right: 0;
+  }
+
+  #newsletter .form button {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+  }
+
+  /* FOOTER */
+  #footer {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 25px;
+  }
+
+  #footer div {
+    width: 100%;
+  }
+}
+
+
+/* ----------- Small Mobile (max-width: 480px) ----------- */
+@media (max-width: 480px) {
+
+  body {
+    padding-top: 80px;
+  }
+
+  .wishlist-container {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .icon-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cart-count {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+
+  #newsletter {
+    padding: 30px 16px;
+  }
+
+  #footer {
+    padding: 30px 20px;
+  }
+
+  #footer p,
+  #footer a {
+    font-size: 14px;
+  }
+}

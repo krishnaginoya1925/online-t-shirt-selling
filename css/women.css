@@ -627,3 +627,168 @@ span {
   border-radius: 7px;
 }
 
+/* responsive */
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* -------- LARGE TABLETS (max-width: 1024px) -------- */
+@media (max-width: 1024px) {
+
+  #header {
+    padding: 16px 40px;
+  }
+
+  #hero {
+    padding: 0 40px;
+  }
+
+  #features {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .product-section .pro-collection {
+    margin: 0 30px;
+    justify-content: center;
+  }
+
+  #banners {
+    margin: 0 30px;
+  }
+
+  #banners .big-banners {
+    flex-direction: column;
+  }
+
+  #banners .big-banners div {
+    min-width: 100%;
+  }
+
+  #newsletter {
+    padding: 0 40px;
+    background-position: center;
+  }
+
+  #footer {
+    padding: 60px 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+
+/* -------- TABLETS (max-width: 900px) -------- */
+@media (max-width: 900px) {
+
+  #hero h1,
+  #hero h2 {
+    font-size: 54px;
+  }
+
+  #features {
+    justify-content: center;
+  }
+
+  .product-section .product-cart {
+    width: 240px;
+  }
+
+  #banners .small-banners {
+    flex-wrap: wrap;
+  }
+
+  #newsletter {
+    flex-direction: column;
+    height: auto;
+    padding: 30px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  #newsletter .form {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+/* -------- MOBILE (max-width: 768px) -------- */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  #header {
+    padding: 14px 20px;
+  }
+
+  .header-list-nav {
+    display: none;
+  }
+
+  .header-icons {
+    gap: 16px;
+    padding-right: 0;
+  }
+
+  /* HERO */
+  #hero {
+    height: auto;
+    padding: 120px 20px 60px;
+  }
+
+  #hero h4 {
+    font-size: 26px;
+  }
+
+  #hero h1,
+  #hero h2 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  #hero button {
+    width: 200px;
+    font-size: 16px;
+  }
+
+  /* FEATURES */
+  #features {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #features .f-box {
+    width: 45%;
+  }
+
+  /* PRODUCTS */
+  .product-section .pro-collection {
+    margin: 0 10px;
+    justify-content: center;
+  }
+
+  .product-section .product-cart {
+    width: 45%;
+  }
+
+  /* BANNERS */
+  #banners {
+    margin: 0 15px;
+  }
+
+  #banners .big-banners div,
+  #banners .small-banners div {
+    min-width: 100%;
+  }
+
+  /* NEWSLETTER */
+  #newsletter {
+    padding: 30px 20px;
+  }
+
+  #newsletter .newsletter-text h3 {
+    font-size: 24px;
+  }
+
+  #newsletter .form {
+    width: 100%;
+    flex-direction: column;

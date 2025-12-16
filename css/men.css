@@ -627,3 +627,200 @@ span {
   border-radius: 7px;
 }
 
+/* responsive */
+
+/* ===============================
+   RESPONSIVE STYLES
+================================ */
+
+/* ---------- Large Tablets ---------- */
+@media (max-width: 1024px) {
+
+  #header {
+    padding: 15px 40px;
+  }
+
+  #hero {
+    padding: 0 40px;
+    height: 85vh;
+  }
+
+  #hero h1,
+  #hero h2 {
+    font-size: 52px;
+  }
+
+  #features {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .product-section .pro-collection {
+    margin: 0 30px;
+  }
+
+  #banners {
+    margin: 0 30px;
+  }
+
+  #newsletter {
+    padding: 0 40px;
+  }
+
+  #footer {
+    padding: 50px 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+
+/* ---------- Tablets ---------- */
+@media (max-width: 768px) {
+
+  /* Header */
+  #header {
+    padding: 12px 20px;
+  }
+
+  .header-list-nav ul {
+    flex-direction: column;
+  }
+
+  /* Hero */
+  #hero {
+    padding: 0 20px;
+  }
+
+  #hero h4 {
+    font-size: 24px;
+  }
+
+  #hero h1,
+  #hero h2 {
+    font-size: 38px;
+    line-height: 45px;
+  }
+
+  #hero button {
+    width: 220px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  /* Features */
+  #features {
+    flex-direction: column;
+  }
+
+  #features .f-box {
+    width: 90%;
+  }
+
+  /* Products */
+  .product-section .pro-collection {
+    margin: 0 15px;
+    justify-content: center;
+  }
+
+  .product-section .product-cart {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Banners */
+  #banners .big-banners {
+    flex-direction: column;
+  }
+
+  #banners .big-banners div {
+    min-width: 100%;
+  }
+
+  #banners .small-banners {
+    flex-direction: column;
+  }
+
+  #banners .small-banners div {
+    min-width: 100%;
+  }
+
+  /* Newsletter */
+  #newsletter {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 20px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  #newsletter .form {
+    display: flex;
+    width: 100%;
+  }
+
+  #newsletter .form input {
+    width: 100%;
+  }
+
+  #newsletter .form button {
+    width: 120px;
+  }
+
+  /* Footer */
+  #footer {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+}
+
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  #hero h1,
+  #hero h2 {
+    font-size: 30px;
+  }
+
+  #hero h4 {
+    font-size: 20px;
+  }
+
+  #newsletter .newsletter-text h3 {
+    font-size: 22px;
+  }
+
+  #newsletter .newsletter-text h5 {
+    font-size: 14px;
+  }
+
+  #newsletter .form input {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  #newsletter .form button {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .cart-btn,
+  .wishlist-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}

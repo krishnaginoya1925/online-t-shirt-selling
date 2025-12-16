@@ -370,3 +370,198 @@ grid-template-columns: 1fr;
   border: 1px solid #08817969;
   border-radius: 7px;
 }
+
+
+/* Responsive */
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+/* ---------- LARGE TABLETS (≤1024px) ---------- */
+@media (max-width: 1024px) {
+
+  #header {
+    padding: 18px 40px;
+  }
+
+  .header-list-nav ul li {
+    padding: 0 14px;
+  }
+
+  .category-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0 30px;
+  }
+
+  #newsletter {
+    padding: 0 40px;
+    height: auto;
+  }
+
+  #footer {
+    padding: 60px 40px;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  #footer > div {
+    flex: 1 1 45%;
+  }
+}
+
+/* ---------- TABLETS (≤768px) ---------- */
+@media (max-width: 768px) {
+
+  body {
+    padding: 20px;
+  }
+
+  /* Header */
+  #header {
+    padding: 15px 25px;
+  }
+
+  .header-list-nav ul li {
+    padding: 0 10px;
+  }
+
+  .header-icons {
+    gap: 16px;
+    padding-right: 0;
+  }
+
+  /* Title */
+  .title {
+    font-size: 30px;
+    padding: 30px 10px;
+    margin-top: 100px;
+  }
+
+  /* Categories */
+  .category-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .category-card h2 {
+    font-size: 24px;
+  }
+
+  /* Newsletter */
+  #newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 30px;
+    gap: 20px;
+    background-position: center;
+  }
+
+  #newsletter .form {
+    width: 100%;
+    display: flex;
+  }
+
+  #newsletter .form input {
+    width: 100%;
+  }
+
+  /* Footer */
+  #footer {
+    flex-direction: column;
+    padding: 50px 30px;
+  }
+
+  #footer > div {
+    width: 100%;
+  }
+}
+
+/* ---------- MOBILE (≤576px) ---------- */
+@media (max-width: 576px) {
+
+  body {
+    padding: 15px;
+  }
+
+  /* Header */
+  #header {
+    padding: 12px 18px;
+  }
+
+  .header-list-nav {
+    display: none; /* hide menu (no hamburger yet) */
+  }
+
+  .header-icons {
+    gap: 14px;
+  }
+
+  /* Title */
+  .title {
+    font-size: 26px;
+    padding: 20px 10px;
+    margin-top: 90px;
+  }
+
+  /* Category cards */
+  .category-card {
+    padding: 16px;
+  }
+
+  .category-card h2 {
+    font-size: 22px;
+  }
+
+  /* Newsletter */
+  #newsletter {
+    padding: 30px 20px;
+  }
+
+  #newsletter .newsletter-text h3 {
+    font-size: 24px;
+  }
+
+  #newsletter .newsletter-text h5 {
+    font-size: 15px;
+  }
+
+  #newsletter .form {
+    flex-direction: column;
+  }
+
+  #newsletter .form input {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  #newsletter .form button {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  /* Footer */
+  #footer {
+    padding: 40px 20px;
+    text-align: center;
+  }
+}
+
+/* ---------- VERY SMALL DEVICES (≤360px) ---------- */
+@media (max-width: 360px) {
+
+  .title {
+    font-size: 22px;
+  }
+
+  .category-card h2 {
+    font-size: 20px;
+  }
+
+  #newsletter .newsletter-text h3 {
+    font-size: 22px;
+  }
+}

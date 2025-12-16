@@ -354,5 +354,118 @@ body {
   border-radius: 7px;
 }
 
+/* Responsive */
+
+/* ================= RESPONSIVE ================= */
+
+/* ---------- Tablets (max-width: 992px) ---------- */
+@media (max-width: 992px) {
+
+  #header {
+    padding: 15px 30px;
+  }
+
+  .header-list-nav ul li {
+    padding: 0 12px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .profile-layout {
+    gap: 20px;
+  }
+
+  #footer {
+    padding: 50px 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 
 
+/* ---------- Mobile (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  #header {
+    padding: 15px 20px;
+  }
+
+  .header-list-nav {
+    display: none; /* hide menu for mobile */
+  }
+
+  .header-icons {
+    padding-right: 0;
+  }
+
+  /* PROFILE LAYOUT */
+  .profile-layout {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+  }
+
+  .profile-content h2 {
+    font-size: 22px;
+  }
+
+  .profile-box {
+    padding: 0 20px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* FOOTER */
+  #footer {
+    flex-direction: column;
+    padding: 40px 25px;
+    gap: 25px;
+    text-align: left;
+  }
+
+  #footer div {
+    width: 100%;
+  }
+}
+
+
+/* ---------- Small Mobile (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .profile-sidebar ul li {
+    padding: 14px 15px;
+    font-size: 14px;
+  }
+
+  .add-cart-btn {
+    font-size: 13px;
+  }
+
+  #footer {
+    padding: 30px 20px;
+  }
+}
