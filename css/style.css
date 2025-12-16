@@ -8,6 +8,10 @@
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 
 h1 {
   font-size: 50px;
@@ -325,6 +329,15 @@ body {
   width: 100%;
   border-radius: 25px;
 }
+.product-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
 .product-section .product-cart span {
   color: #969696;
   font-weight: 500;
@@ -405,6 +418,12 @@ body {
   color: #eaebf0;
   padding: 20px 0;
 }
+#off-banner {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
 
 /* new arrival section styles 
   this section gets the same styles 
@@ -511,6 +530,25 @@ span {
   justify-content: space-between;
   padding: 0 75px;
 }
+#newsletter {
+  background-image: url(../images/banner/b14.png);
+  background-repeat: no-repeat;
+  background-position: right 100px center;
+  background-color: #041e42;
+
+  width: 100vw;
+  height: 160px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 75px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+
 #newsletter .newsletter-text h3 {
   color: white;
   font-size: 30px;
