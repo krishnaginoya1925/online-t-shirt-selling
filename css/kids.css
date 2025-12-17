@@ -8,10 +8,6 @@
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
 }
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
 
 h1 {
   font-size: 50px;
@@ -145,6 +141,29 @@ body {
   display: block;
 }
 
+
+/* Cart count bubble */
+.cart-box {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    left: 8px;
+    background: orange;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
 #header {
   display: flex;
   align-items: center;
@@ -203,7 +222,6 @@ body {
   bottom: -4px;
   left: 20px;
 }
-
 /* home main styles */
 
 /* hero section styles */
@@ -250,7 +268,7 @@ body {
 
 /* feature section styles */
 .f1{
-  padding-top: 30px;
+  padding-top: 70px;
 }
 
 #features {
@@ -307,9 +325,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 10px;
-  margin: 0 auto;
-  max-width: 1400px;
-  padding: 0 20px;
+  margin: 0 60px;
 }
 .product-section h1,
 .product-section p {
@@ -331,12 +347,6 @@ body {
 .product-section .product-cart img {
   width: 100%;
   border-radius: 25px;
-}
-.product-section {
-  margin-top: 15px;
-  width: 100%;
-  padding: 40px 20px;
-  box-sizing: border-box;
 }
 .product-section .product-cart span {
   color: #969696;
@@ -363,14 +373,16 @@ body {
   position: absolute;
   right: 10px;
   bottom: 10px;
+  
 }
-.action-box {
+/* .action-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 90%;
   margin-top: 10px;
 }
+
 .cart-btn,
 .wishlist-btn {
   width: 45px;
@@ -384,6 +396,36 @@ body {
   background: #e8f9f2;
   font-size: 20px;
 }
+
+.wishlist-btn i {
+  color: black;
+}
+
+.cart-btn i {
+  color: #00695c;
+} */
+ .action-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.cart-btn,
+.wishlist-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f9f2;
+  font-size: 20px;
+}
+
 .wishlist-btn i {
   color: black;
   transition: 0.3s;
@@ -391,9 +433,13 @@ body {
 .wishlist-btn.active i {
    color: red !important;   
 }
+
 .cart-btn i {
   color: #00695c;
 }
+
+
+
 
 /* off banner section styles */
 
@@ -413,9 +459,6 @@ body {
 #off-banner h2 {
   color: #eaebf0;
   padding: 20px 0;
-}
-#off-banner {
-  width: 100%;
 }
 
 /* new arrival section styles 
@@ -439,8 +482,7 @@ span {
   justify-content: center;
 }
 #banners .big-banners div {
-    width: 580px;
-  max-width: 100%;
+  min-width: 580px;
   margin: 15px;
   height: 300px;
   display: flex;
@@ -487,8 +529,7 @@ span {
   justify-content: center;
 }
 #banners .small-banners div {
-   width: 370px;
-  max-width: 100%;
+  min-width: 370px;
   height: 200px;
   margin: 15px;
   display: flex;
@@ -505,131 +546,65 @@ span {
   color: #771818;
 }
 
-
-/* checkout.html page */
-
-
-
-
-
 /* newsletter section styles */
 
-/* ===== NEWSLETTER SECTION ===== */
-#full-width {
-  width: 100vw;              /* real viewport width */
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-}
-
 #newsletter {
-  margin-top: 50px;    
-  margin-bottom: 0;      /* ✅ space above only */
-  width: 100%;               /* ✅ full width */
   background-image: url(../images/banner/b14.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 180px;
   background-color: #041e42;
   height: 160px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 75px;           /* inner spacing (safe) */
+  padding: 0 75px;
 }
-
-
-
 #newsletter .newsletter-text h3 {
-  color: #fff;
-  font-size: 32px;
-  margin-bottom: 10px;
+  color: white;
+  font-size: 30px;
+  padding: 0 0 15px 0;
 }
-
 #newsletter .newsletter-text h5 {
-  color: #cfcfcf;
-  font-size: 16px;
+  color: rgb(151, 151, 151);
+  font-size: 17px;
 }
-
 #newsletter .newsletter-text h5 span {
-  color: #ffcc00;
-  font-weight: 600;
+  color: rgb(216, 182, 29);
 }
-
-/* RIGHT FORM */
-#newsletter .form {
-  display: flex;
-  align-items: center;
-}
-
 #newsletter .form input {
+  padding: 20px;
+  width: 350px;
   height: 56px;
-  width: 380px;
-  padding: 0 20px;
+  background-color: #d1d0d0;
+  border-radius: 6px 0 0 6px;
+  font-size: 18px;
 
-  background-color: #dcdcdc;
   border: none;
   outline: none;
-
-  font-size: 16px;
-  border-radius: 6px 0 0 6px;
+  margin-right: -4px;
+  margin-top: 1px;
 }
-
 #newsletter .form button {
-  height: 56px;
-  width: 140px;
-
+  margin-left: 0;
+  padding: 20px;
   border: none;
+  width: 120px;
   background-color: #088178;
-  color: #fff;
-
-  font-size: 16px;
-  font-weight: 500;
-
+  color: white;
+  font-size: 17px;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
 }
 
-#newsletter .form button:hover {
-  background-color: #066d66;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  #newsletter {
-    flex-direction: column;
-    margin-bottom: 0;
-    text-align: center;
-    padding: 30px 20px;
-    height: auto;
-    gap: 20px;
-  }
-
-  #newsletter .newsletter-text {
-    max-width: 100%;
-  }
-
-  #newsletter .form {
-    width: 100%;
-  }
-
-  #newsletter .form input {
-    width: 100%;
-  }
-}
-
-
 /* footer section styles */
 
-#footer {
+#footer{
   display: flex;
-  margin-top: 0;
-  padding-top: 0;
-  align-items: flex-start;
+  align-items:flex-start;
   justify-content: space-between;
   padding: 75px;
   background-color: #ececec;
-  width: 100%;
 }
-
 #footer div{
 }
 #footer p, #footer a{
@@ -654,71 +629,40 @@ span {
 
 /* Responsive */
 
-/* ================================
-   RESPONSIVE CSS
+/* ===============================
+   RESPONSIVE DESIGN
 ================================ */
 
-/* ---------- Large Laptops (1200px and below) ---------- */
-@media (max-width: 1200px) {
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+
   #header {
-    padding: 20px 40px;
+    padding: 15px 40px;
   }
 
   #hero {
     padding: 0 40px;
   }
 
+  #hero h1,
+  #hero h2 {
+    font-size: 50px;
+  }
+
+  #features {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .product-section .pro-collection {
+    margin: 0 30px;
+    justify-content: center;
+  }
+
   #banners {
     margin: 0 30px;
   }
 
-  .product-section .pro-collection {
-    margin: 0 30px;
-  }
-
-  #footer {
-    padding: 60px 40px;
-  }
-}
-
-/* ---------- Tablets (992px and below) ---------- */
-@media (max-width: 992px) {
-  h1 { font-size: 42px; }
-  h2 { font-size: 36px; }
-
-  /* Header */
-  #header {
-    padding: 15px 25px;
-  }
-
-  .header-list-nav ul li {
-    padding: 0 12px;
-  }
-
-  /* Hero */
-  #hero {
-    height: 80vh;
-    padding: 0 25px;
-  }
-
-  #hero h1,
-  #hero h2 {
-    font-size: 52px;
-  }
-
-  /* Features */
-  #features {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  /* Products */
-  .product-section .pro-collection {
-    justify-content: center;
-    gap: 20px;
-  }
-
-  /* Banners */
   #banners .big-banners {
     flex-direction: column;
   }
@@ -727,121 +671,147 @@ span {
     min-width: 100%;
   }
 
-  #banners .small-banners {
-    flex-wrap: wrap;
+  #newsletter {
+    padding: 0 40px;
   }
 
-  #banners .small-banners div {
-    min-width: 45%;
-  }
-
-  /* Footer */
   #footer {
-    flex-wrap: wrap;
+    padding: 50px;
     gap: 30px;
   }
 }
 
-/* ---------- Mobile Devices (768px and below) ---------- */
+/* Mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
-  h1 { font-size: 36px; }
-  h2 { font-size: 30px; }
-  p { font-size: 15px; }
 
-  /* Header */
+  /* HEADER */
   #header {
+    flex-direction: column;
+    gap: 15px;
     padding: 15px 20px;
   }
 
   .header-list-nav ul {
-    display: none; /* mobile menu later if needed */
+    flex-direction: column;
+    gap: 12px;
   }
 
-  /* Hero */
+  /* HERO */
   #hero {
-    height: 70vh;
-    padding: 0 20px;
+    height: auto;
+    padding: 120px 20px 60px;
+    align-items: center;
+    text-align: center;
   }
 
   #hero h1,
   #hero h2 {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   #hero h4 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
-  #hero button {
-    width: 200px;
-    height: 50px;
-    font-size: 16px;
+  /* FEATURES */
+  #features {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  /* Features */
-  #features .f-box {
-    width: 45%;
+  /* PRODUCTS */
+  .product-section .pro-collection {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
   }
 
-  /* Products */
   .product-section .product-cart {
     width: 90%;
   }
 
-  /* Off banner */
-  #off-banner {
-    height: auto;
-    padding: 40px 20px;
-    text-align: center;
+  /* BANNERS */
+  #banners .small-banners {
+    flex-direction: column;
   }
 
-  /* Newsletter */
+  #banners .small-banners div {
+    min-width: 100%;
+  }
+
+  /* NEWSLETTER */
   #newsletter {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
     padding: 30px 20px;
-    background-position: center;
+    gap: 20px;
   }
 
   #newsletter .form {
-    flex-direction: column;
+    display: flex;
     width: 100%;
   }
 
   #newsletter .form input {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 10px;
+    width: 70%;
+    font-size: 16px;
   }
 
   #newsletter .form button {
-    width: 100%;
-    border-radius: 6px;
+    width: 30%;
+    font-size: 16px;
   }
 
-  /* Footer */
+  /* FOOTER */
   #footer {
-    padding: 40px 20px;
     flex-direction: column;
-    text-align: center;
+    padding: 40px 20px;
+    gap: 25px;
   }
 }
 
-/* ---------- Small Mobile (480px and below) ---------- */
+/* Small phones (max-width: 480px) */
 @media (max-width: 480px) {
-  h1 { font-size: 30px; }
-  h2 { font-size: 26px; }
 
-  /* Features */
-  #features .f-box {
-    width: 100%;
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
   }
 
-  /* Products */
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  #hero h1,
+  #hero h2 {
+    font-size: 32px;
+  }
+
+  #newsletter .newsletter-text h3 {
+    font-size: 22px;
+  }
+
+  #newsletter .newsletter-text h5 {
+    font-size: 14px;
+  }
+
+  #newsletter .form {
+    flex-direction: column;
+  }
+
+  #newsletter .form input,
+  #newsletter .form button {
+    width: 100%;
+    border-radius: 6px;
+    margin: 5px 0;
+  }
+
   .product-section .product-cart {
-    width: 100%;
-  }
-
-  /* Banners */
-  #banners .small-banners div {
-    min-width: 100%;
+    width: 95%;
   }
 }

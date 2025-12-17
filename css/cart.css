@@ -161,29 +161,6 @@ body {
   display: block;
 }
 
-
-/* Cart count bubble */
-.cart-box {
-    position: relative;
-}
-
-.cart-count {
-    position: absolute;
-    top: -10px;
-    left: 8px;
-    background: orange;
-    color: white;
-    font-size: 12px;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-
 #header {
   display: flex;
   align-items: center;
