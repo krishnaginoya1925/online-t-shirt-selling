@@ -307,7 +307,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 10px;
-    margin: 0 auto;
+  margin: 0 auto;
   max-width: 1400px;
   padding: 0 20px;
 }
@@ -333,13 +333,11 @@ body {
   border-radius: 25px;
 }
 .product-section {
+  margin-top: 15px;
   width: 100%;
   padding: 40px 20px;
   box-sizing: border-box;
 }
-
-
-
 .product-section .product-cart span {
   color: #969696;
   font-weight: 500;
@@ -365,7 +363,6 @@ body {
   position: absolute;
   right: 10px;
   bottom: 10px;
-  
 }
 .action-box {
   display: flex;
@@ -374,7 +371,6 @@ body {
   width: 90%;
   margin-top: 10px;
 }
-
 .cart-btn,
 .wishlist-btn {
   width: 45px;
@@ -388,7 +384,6 @@ body {
   background: #e8f9f2;
   font-size: 20px;
 }
-
 .wishlist-btn i {
   color: black;
   transition: 0.3s;
@@ -396,7 +391,6 @@ body {
 .wishlist-btn.active i {
    color: red !important;   
 }
-
 .cart-btn i {
   color: #00695c;
 }
@@ -423,8 +417,6 @@ body {
 #off-banner {
   width: 100%;
 }
-
-
 
 /* new arrival section styles 
   this section gets the same styles 
@@ -512,13 +504,6 @@ span {
 #banners .small-banners h5 {
   color: #771818;
 }
-
-
-/* checkout.html page */
-
-
-
-
 
 /* newsletter section styles */
 
