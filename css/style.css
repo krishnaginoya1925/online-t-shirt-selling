@@ -514,8 +514,182 @@ span {
 }
 
 
-/* checkout.html page */
+/* category.html page */
+.title {
+text-align: center;
+font-size: 36px;
+margin-bottom: 5px;
+margin-top: 50px;
+padding: 50px;
+}
 
+
+.category-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 40px;
+max-width: 1100px;
+margin: auto;
+
+}
+
+
+.category-card {
+text-decoration: none;
+background: #f5f5f5;
+border-radius: 20px;
+text-align: center;
+padding: 20px;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.category-card img {
+width: 100%;
+border-radius: 16px;
+}
+
+
+.category-card h2 {
+margin-top: 20px;
+font-size: 28px;
+color: #222;
+}
+
+
+.category-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+
+@media (max-width: 900px) {
+.category-container {
+grid-template-columns: 1fr;
+}
+}
+
+
+/* profile.html */
+
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --primary: #111;
+  --border-soft: #ededed;
+  --light-bg: #fafafa;
+}
+
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= PROFILE LAYOUT ================= */
+.profile-section{
+  margin-top: 150px;
+}
+.profile-layout {
+  display: flex;
+  margin-top: 50px;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* ================= SIDEBAR ================= */
+.profile-sidebar {
+  width: 260px;
+  background: #fff;
+  border: 1px solid var(--border-soft);
+}
+
+.profile-sidebar ul {
+  list-style: none;
+}
+
+.profile-sidebar ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  font-size: 15px;
+  color: #111;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.profile-sidebar ul li i {
+  font-size: 16px;
+}
+
+/* ACTIVE ITEM */
+.profile-sidebar ul li.active {
+  background: #fbf8f3;
+  font-weight: 600;
+}
+
+/* HOVER */
+.profile-sidebar ul li:hover {
+  background: #f6f6f6;
+}
+
+/* LOGOUT */
+.profile-sidebar ul li.logout {
+  color: #d32f2f;
+}
+
+/* ================= MAIN CONTENT ================= */
+.profile-content {
+  flex: 1;
+}
+
+.profile-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* ================= PROFILE BOX ================= */
+.profile-box {
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  padding: 0 30px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 15px;
+}
+
+.info-row span:first-child {
+  color: #111;
+}
+
+.info-row span:last-child {
+  color: #000;
+  font-weight: 500;
+}
+
+/* EDIT PROFILE LINK */
+.add-cart-btn {
+  display: inline-block;
+  margin: 20px 0;
+  color: #5a2dd8;
+  text-decoration: underline;
+  font-size: 14px;
+}
 
 
 
