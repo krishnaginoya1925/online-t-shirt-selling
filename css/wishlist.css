@@ -8,6 +8,11 @@
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 
 h1 {
   font-size: 50px;
