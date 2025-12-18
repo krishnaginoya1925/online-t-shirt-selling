@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Register | VastraHub</title>
 
     <!-- global styles -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="../css/login.css">
-</head>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
 
-<body>
+  <body>
+    <div id="header"></div>
 
-<div id="header"></div>
-
-<section class="auth-section">
-    <div class="auth-box">
+    <section class="auth-section">
+      <div class="auth-box">
         <h2>Create Account</h2>
 
         <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email address" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email address" required />
+          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Confirm Password" required />
 
-            <button type="submit" class="btn">Register</button>
+          <button type="submit" class="btn">Register</button>
         </form>
 
         <p class="auth-text">
-            Already have an account?
-            <a href="login.html">Login</a>
+          Already have an account?
+          <a href="login.html">Login</a>
         </p>
-    </div>
-</section>
+      </div>
+    </section>
 
-<div id="footer"></div>
+    <div id="footer"></div>
 
-<script>
-fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
+    <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((data) => (document.getElementById("header").innerHTML = data));
 
-fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
-
-</body>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data));
+    </script>
+  </body>
 </html>
