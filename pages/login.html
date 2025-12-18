@@ -3,42 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Login | VastraHub</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="../css/login.css">
 </head>
-
 <body>
-
-<div id="header"></div>
-
-<section class="auth-section">
-    <div class="auth-box">
-        <h2>Login</h2>
-
-        <!-- ✅ ADD ID HERE -->
-        <form id="loginForm">
-            <input type="email" placeholder="Email address" required>
-            <input type="password" placeholder="Password" required>
-
-            <button type="submit" class="btn">Sign In</button>
-        </form>
-
-        <p class="auth-text">
-            Don’t have an account?
-            <a href="registration.html">Register</a>
-        </p>
-    </div>
-</section>
-
-<div id="footer"></div>
-
-<script>
-document.getElementById("loginForm").addEventListener("submit", function(e) {
-    e.preventDefault(); 
-    window.location.href = "index.html"; 
-});
-</script>
-
+    <div id="header"></div>
+    <section class="auth-section">
+        <div class="auth-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p class="auth-text">
+                Don’t have an account?
+                <a href="registration.html">Register</a>
+            </p>
+        </div>
+    </section>
+    <div id="footer"></div>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            window.location.href = "index.html";
+        });
+    </script>
 </body>
 </html>

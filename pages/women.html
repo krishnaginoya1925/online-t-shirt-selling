@@ -1,663 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecommerce website</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/0e53af926d.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!--header section-->
-
-    <header>
-      <div id="header">
-        <div class="header-logo">
-          <a href="indext.html"><img src="../images/logo.png" alt="" /></a>
-        </div>
-        <div class="header-list">
-          <nav class="header-list-nav">
-            <ul>
-              <li><a  href="index.html">Home</a></li>
-              <li><a  href="collection.html">Collection</a></li>
-              <li><a class="active" href="category.html">Category</a></li>
-              <li><a href="contact-us.html">Contact Us</a></li>
-            </ul>
-          </nav>
-          <header class="header-icons">
-   
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecommerce website</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://kit.fontawesome.com/0e53af926d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div id="header">
+      <div class="header-logo">
+        <a href="indext.html"><img src="../images/logo.png" alt="" /></a>
+      </div>
+      <div class="header-list">
+        <nav class="header-list-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a class="active" href="category.html">Category</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <header class="header-icons">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
           <div class="header-list-icon">
             <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
           </div>
-           <div class="icon-box">
-  <a class="active" href="wishlist.html" class="wishlist-link" aria-label="Open wishlist">
-    <i class="fa-regular fa-heart"></i>
-  </a>
-</div>
-    <div class="account-container">
-  <div class="icon-box" id="accountBtn">
-    <i class="fa-solid fa-user"></i>
-  </div>
-
-  <!-- Dropdown -->
-  <div class="account-dropdown" id="accountDropdown">
-    <a href="profile.html">Profile</a>
-    <a href="login.html">Login</a>
-    <a href="#" id="logoutBtn">Logout</a>
-  </div>
-</div>
-     </div>
+          <div class="icon-box">
+            <a class="active" href="wishlist.html" class="wishlist-link" aria-label="Open wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </a>
+          </div>
+          <div class="account-container">
+            <div class="icon-box" id="accountBtn">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="account-dropdown" id="accountDropdown">
+              <a href="profile.html">Profile</a>
+              <a href="login.html">Login</a>
+              <a href="#" id="logoutBtn">Logout</a>
+            </div>
+          </div>
       </div>
-</header>
-    </header>
-
-    <!-- MAIN SECTION -->
-    <main>
-
-      <a href="#" class="add-to-cart"
-   data-id="1"
-   data-name="Cartoon Astronaut T-Shirts"
-   data-price="78">
-   <i class="fa-solid fa-cart-shopping buy-icon"></i>
-</a>
-
-
-      <section class="product-section section-p1">
-        <h1 class="f1">Women's Wear</h1>
-        <p></p>
-
-        <div class="pro-collection">
-
-          <!-- PRODUCT 1 -->
-         <div class="product-cart">
-  <img src="../images/products/women/w11.jpg" alt="product image" />
-  <span>ZARA</span>
-  <h4>HERRINGBONE KNIT WAISTCOAT</h4>
-
-  <div class="stars">
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-  </div>
-
-  <h4 class="price">$78</h4>
-
-  <!-- ★ NEW: Action buttons container -->
-  <div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="201"
-   data-name="HERRINGBONE KNIT WAISTCOAT"
-   data-price="78"
-   data-img="../images/products/women/w11.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="HERRINGBONE KNIT WAISTCOAT"
-      data-id="201"
-      data-img="../images/products/women/w11.jpg"
-      data-price="78">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-</div>
-
-
-          <!-- PRODUCT 2 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w12.jpg" alt="product image">
-            <span>ZARA</span>
-            <h4>KNIT TOP WITH SCARF AND FRINGED HEM</h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$35</h4>
-
-           <div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="202"
-   data-name="KNIT TOP WITH SCARF AND FRINGED HEM"
-   data-price="35"
-   data-img="../images/products/women/w12.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="KNIT TOP WITH SCARF AND FRINGED HEM"
-      data-id="202"
-      data-img="../images/products/women/w12.jpg"
-      data-price="35">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
+    </div>
+  </header>
+  </header>
+  <!-- MAIN SECTION -->
+  <main>
+    <a href="#" class="add-to-cart" data-id="1" data-name="Cartoon Astronaut T-Shirts" data-price="78">
+      <i class="fa-solid fa-cart-shopping buy-icon"></i>
+    </a>
+    <section class="product-section section-p1">
+      <h1 class="f1">Women's Wear</h1>
+      <p></p>
+      <div class="pro-collection">
+        <!-- PRODUCT 1 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w11.jpg" alt="product image" />
+          <span>ZARA</span>
+          <h4>HERRINGBONE KNIT WAISTCOAT</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
           </div>
-
-          <!-- PRODUCT 3 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w13.jpg" alt="product image">
-            <span>H&M</span>
-            <h4>SHORT SLEEVE JACQUARD KNIT JUMPER</h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$50</h4>
-
-           <div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="203"
-   data-name="SHORT SLEEVE JACQUARD KNIT JUMPER"
-   data-price="50"
-   data-img="../images/products/women/w13.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="SHORT SLEEVE JACQUARD KNIT JUMPER"
-      data-id="203"
-      data-img="../images/products/women/w13.jpg"
-      data-price="50">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-          </div>
-
-          <!-- PRODUCT 4 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w14.jpg" alt="product image">
-            <span>TRENDS</span>
-            <h4>ASYMMETRIC WOOL TOP WITH BELT</h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$20</h4>
-
-            <div class="action-box">
-    <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="204"
-   data-name="ASYMMETRIC WOOL TOP WITH BELT"
-   data-price="20"
-   data-img="../images/products/women/w14.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="ASYMMETRIC WOOL TOP WITH BELT"
-      data-id="204"
-      data-img="../images/products/women/w14.jpg"
-      data-price="20">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-          </div>
-
-          <!-- PRODUCT 5 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w15.jpg" alt="product image">
-            <span>LIFESTYLE</span>
-            <h4>SHORT SLEEVE KNIT JUMPER </h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$47</h4>
-<div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="205"
-   data-name="SHORT SLEEVE KNIT JUMPER "
-   data-price="47"
-   data-img="../images/products/women/w15.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="SHORT SLEEVE KNIT JUMPER "
-      data-id="205"
-      data-img="../images/products/women/w15.jpg"
-      data-price="47">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-          </div>
-
-          <!-- PRODUCT 6 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w16.jpg" alt="product image">
-            <span>MANGO</span>
-            <h4>CONTRAST FLOWER SWEATSHIRT</h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$55</h4>
-
-            <div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="206"
-   data-name="CONTRAST FLOWER SWEATSHIRT"
-   data-price="55"
-   data-img="../images/products/women/w16.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="CONTRAST FLOWER SWEATSHIRT"
-      data-id="206"
-      data-img="../images/products/women/w16.jpg"
-      data-price="55">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-          </div>
-
-          <!-- PRODUCT 7 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w2.jpg" alt="product image">
-            <span>ZARA</span>
-            <h4>PUFF SLEEVE TOP</h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$68</h4>
-
-            <div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="207"
-   data-name="PUFF SLEEVE TOP"
-   data-price="68"
-   data-img="../images/products/women/w2.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="PUFF SLEEVE TOP"
-      data-id="207"
-      data-img="../images/products/women/w2.jpg"
-      data-price="68">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-          </div>
-
-          <!-- PRODUCT 8 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w3.jpg" alt="product image">
-            <span>H&M</span>
-            <h4>CONTRAST CREPE TOP</h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$15</h4>
-
-            <div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="208"
-   data-name="CONTRAST CREPE TOP"
-   data-price="15"
-   data-img="../images/products/women/w3.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="CONTRAST CREPE TOP"
-      data-id="208"
-      data-img="../images/products/women/w3.jpg"
-      data-price="15">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-          </div>
-
-          <!-- PRODUCT 9 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w4.jpg" alt="product image">
-            <span>SAVANA</span>
-            <h4>CARDIGAN WITH SLEEVE OPENING</h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$56</h4>
-<div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="209"
-   data-name="CARDIGAN WITH SLEEVE OPENING"
-   data-price="56"
-   data-img="../images/products/women/w4.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="CARDIGAN WITH SLEEVE OPENING"
-      data-id="209"
-      data-img="../images/products/women/w4.jpg"
-      data-price="56">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-          </div>
-
-          <!-- PRODUCT 10 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w5.jpg" alt="product image">
-            <span>SHEIN</span>
-            <h4>ASYMMETRIC KNIT TOP</h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$44</h4>
-
-            <div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="210"
-   data-name="ASYMMETRIC KNIT TOP"
-   data-price="44"
-   data-img="../images/products/women/w5.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="ASYMMETRIC KNIT TOP"
-      data-id="210"
-      data-img="../images/products/women/w5.jpg"
-      data-price="44">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-          </div>
-
-          <!-- PRODUCT 11 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w6.jpg" alt="product image">
-            <span>ZARA</span>
-            <h4>STRIPED KNIT POLO SHIRT</h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$28</h4>
-
-            <div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="211"
-   data-name="STRIPED KNIT POLO SHIRT"
-   data-price="28"
-   data-img="../images/products/women/w6.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="STRIPED KNIT POLO SHIRT"
-      data-id="211"
-      data-img="../images/products/women/w6.jpg"
-      data-price="28">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-          </div>
-
-          <!-- PRODUCT 12 -->
-          <div class="product-cart">
-            <img src="../images/products/women/w7.jpg" alt="product image">
-            <span>MANGO</span>
-            <h4>KNIT JUMPER WITH WIDE SLEEVES</h4>
-
-            <div class="stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h4 class="price">$54</h4>
-
-            <div class="action-box">
-     <a href="#"
-   class="cart-btn add-to-cart"
-   data-id="212"
-   data-name="KNIT JUMPER WITH WIDE SLEEVES"
-   data-price="54"
-   data-img="../images/products/women/w3.jpg">
-  <i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-    <button class="wishlist-btn"
-      data-name="KNIT JUMPER WITH WIDE SLEEVES"
-      data-id="212"
-      data-img="../images/products/women/w3.jpg"
-      data-price="54">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-  </div>
-          </div>
-
-        </div>
-      </section>
-      <section id="newsletter">
-        <div class="newsletter-text">
-          <h3>Sign Up For Newsletters</h3>
-          <h5>get e-mail updates about out latest shop and <span>special offers</span></h5>
-        </div>
-        <div class="form">
-          <input type="email" placeholder="Your email address" id="email-address-input">
-          <button>Sign Up</button>
-        </div>
-      </section>
-
-    </main>
-
-    <!--footer section-->
-
-    <footer>
-      <div id="footer">
-        <div class="contact">
-          <a href="indext.html"><img src="images/logo.png" alt="" /></a>
-          <br> <br>
-          <br> 
-          <h3>Contact</h3>
-          <address>
-            <p><b>Address:</b> Wellington Road, Street 32. San Francisco</p>
-            <p><b>Phone:</b> Wellington Road, Street 32. San Francisco</p>
-            <p><b>Hours</b> 10:00 - 18:00. Mon - Sat</p>
-          </address>
-          <h3>Follow Us</h3>
-          <br> 
-          <div class="socials">
-            <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <h4 class="price">$78</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="201" data-name="HERRINGBONE KNIT WAISTCOAT"
+              data-price="78" data-img="../images/products/women/w11.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="HERRINGBONE KNIT WAISTCOAT" data-id="201"
+              data-img="../images/products/women/w11.jpg" data-price="78">
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
         </div>
-        <div class="about">
-          <h3>About</h3>
-          <br> 
-          <a href="#">About Us</a>
-          <a href="#">Delivery Information</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Contact Us</a>
-        </div>
-        <div class="myaccount ">
-          <h3>My account</h3>
-          <br> 
-          <a href="#">Sign In</a>
-          <a href="cart.html">View Cart</a>
-          <a href="wishlist.html">My Wishlist</a>
-          <a href="#">Track My Order</a>
-          <a href="#">Help</a>
-        </div>
-        <div class="install">
-          <h3>Install App</h3>
-          <br> 
-          <p>From App Store or Google Play</p>
-          <div class="download">
-            <a href="#"><img src="images/pay/app.jpg" alt=""></a>
-            <a href="#"><img src="images/pay/play.jpg" alt=""></a>
+        <!-- PRODUCT 2 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w12.jpg" alt="product image">
+          <span>ZARA</span>
+          <h4>KNIT TOP WITH SCARF AND FRINGED HEM</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
           </div>
-          <p>Secured Payment Gateways</p>
-          <img src="images/pay/pay.png" alt="">
+          <h4 class="price">$35</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="202" data-name="KNIT TOP WITH SCARF AND FRINGED HEM"
+              data-price="35" data-img="../images/products/women/w12.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="KNIT TOP WITH SCARF AND FRINGED HEM" data-id="202"
+              data-img="../images/products/women/w12.jpg" data-price="35">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
         </div>
-        
+        <!-- PRODUCT 3 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w13.jpg" alt="product image">
+          <span>H&M</span>
+          <h4>SHORT SLEEVE JACQUARD KNIT JUMPER</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="price">$50</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="203" data-name="SHORT SLEEVE JACQUARD KNIT JUMPER"
+              data-price="50" data-img="../images/products/women/w13.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="SHORT SLEEVE JACQUARD KNIT JUMPER" data-id="203"
+              data-img="../images/products/women/w13.jpg" data-price="50">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- PRODUCT 4 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w14.jpg" alt="product image">
+          <span>TRENDS</span>
+          <h4>ASYMMETRIC WOOL TOP WITH BELT</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="price">$20</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="204" data-name="ASYMMETRIC WOOL TOP WITH BELT"
+              data-price="20" data-img="../images/products/women/w14.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="ASYMMETRIC WOOL TOP WITH BELT" data-id="204"
+              data-img="../images/products/women/w14.jpg" data-price="20">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- PRODUCT 5 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w15.jpg" alt="product image">
+          <span>LIFESTYLE</span>
+          <h4>SHORT SLEEVE KNIT JUMPER </h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="price">$47</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="205" data-name="SHORT SLEEVE KNIT JUMPER " data-price="47"
+              data-img="../images/products/women/w15.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="SHORT SLEEVE KNIT JUMPER " data-id="205"
+              data-img="../images/products/women/w15.jpg" data-price="47">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- PRODUCT 6 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w16.jpg" alt="product image">
+          <span>MANGO</span>
+          <h4>CONTRAST FLOWER SWEATSHIRT</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="price">$55</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="206" data-name="CONTRAST FLOWER SWEATSHIRT"
+              data-price="55" data-img="../images/products/women/w16.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="CONTRAST FLOWER SWEATSHIRT" data-id="206"
+              data-img="../images/products/women/w16.jpg" data-price="55">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- PRODUCT 7 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w2.jpg" alt="product image">
+          <span>ZARA</span>
+          <h4>PUFF SLEEVE TOP</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="price">$68</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="207" data-name="PUFF SLEEVE TOP" data-price="68"
+              data-img="../images/products/women/w2.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="PUFF SLEEVE TOP" data-id="207"
+              data-img="../images/products/women/w2.jpg" data-price="68">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- PRODUCT 8 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w3.jpg" alt="product image">
+          <span>H&M</span>
+          <h4>CONTRAST CREPE TOP</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="price">$15</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="208" data-name="CONTRAST CREPE TOP" data-price="15"
+              data-img="../images/products/women/w3.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="CONTRAST CREPE TOP" data-id="208"
+              data-img="../images/products/women/w3.jpg" data-price="15">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- PRODUCT 9 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w4.jpg" alt="product image">
+          <span>SAVANA</span>
+          <h4>CARDIGAN WITH SLEEVE OPENING</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="price">$56</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="209" data-name="CARDIGAN WITH SLEEVE OPENING"
+              data-price="56" data-img="../images/products/women/w4.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="CARDIGAN WITH SLEEVE OPENING" data-id="209"
+              data-img="../images/products/women/w4.jpg" data-price="56">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- PRODUCT 10 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w5.jpg" alt="product image">
+          <span>SHEIN</span>
+          <h4>ASYMMETRIC KNIT TOP</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="price">$44</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="210" data-name="ASYMMETRIC KNIT TOP" data-price="44"
+              data-img="../images/products/women/w5.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="ASYMMETRIC KNIT TOP" data-id="210"
+              data-img="../images/products/women/w5.jpg" data-price="44">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- PRODUCT 11 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w6.jpg" alt="product image">
+          <span>ZARA</span>
+          <h4>STRIPED KNIT POLO SHIRT</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="price">$28</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="211" data-name="STRIPED KNIT POLO SHIRT" data-price="28"
+              data-img="../images/products/women/w6.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="STRIPED KNIT POLO SHIRT" data-id="211"
+              data-img="../images/products/women/w6.jpg" data-price="28">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <!-- PRODUCT 12 -->
+        <div class="product-cart">
+          <img src="../images/products/women/w7.jpg" alt="product image">
+          <span>MANGO</span>
+          <h4>KNIT JUMPER WITH WIDE SLEEVES</h4>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4 class="price">$54</h4>
+          <div class="action-box">
+            <a href="#" class="cart-btn add-to-cart" data-id="212" data-name="KNIT JUMPER WITH WIDE SLEEVES"
+              data-price="54" data-img="../images/products/women/w3.jpg">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button class="wishlist-btn" data-name="KNIT JUMPER WITH WIDE SLEEVES" data-id="212"
+              data-img="../images/products/women/w3.jpg" data-price="54">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
       </div>
-    </footer>
-    
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const accountBtn = document.getElementById("accountBtn");
-  const dropdown = document.getElementById("accountDropdown");
-
-  accountBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle("show");
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener("click", () => {
-    dropdown.classList.remove("show");
-  });
-
-  // Logout action
-  document.getElementById("logoutBtn").addEventListener("click", () => {
-    alert("Logged out successfully");
-    // localStorage.clear(); // if using login system
-  });
-
-  const wishBtns = document.querySelectorAll(".wishlist-btn");
-
-  // Highlight already added items on page load
-  const savedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-  wishBtns.forEach(btn => {
-    const id = btn.dataset.id;
-    const icon = btn.querySelector("i");
-
-    const exists = savedWishlist.some(item => item.id === id);
-
-    if (exists) {
-      icon.classList.remove("fa-regular");
-      icon.classList.add("fa-solid");
-      icon.style.color = "red";
-    }
-  });
-
-  // Add to wishlist
-  wishBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-
-      // IMPORTANT: Reload wishlist every click
-      let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-
-      const id = btn.dataset.id;
-      const name = btn.dataset.name;
-      const img = btn.dataset.img;
-      const price = btn.dataset.price;
-      const icon = btn.querySelector("i");
-
-      const exists = wishlist.some(item => item.id === id);
-
-      if (!exists) {
-        wishlist.push({ id, name, img, price });
-        localStorage.setItem("wishlist", JSON.stringify(wishlist));
-
-        icon.classList.remove("fa-regular");
-        icon.classList.add("fa-solid");
-        icon.style.color = "red";
-
-        alert("Added to Wishlist ❤️");
-      } else {
-        alert("Item is already in Wishlist!");
-      }
+    </section>
+    <section id="newsletter">
+      <div class="newsletter-text">
+        <h3>Sign Up For Newsletters</h3>
+        <h5>get e-mail updates about out latest shop and <span>special offers</span></h5>
+      </div>
+      <div class="form">
+        <input type="email" placeholder="Your email address" id="email-address-input">
+        <button>Sign Up</button>
+      </div>
+    </section>
+  </main>
+  <!--footer section-->
+  <footer>
+    <div id="footer">
+      <div class="contact">
+        <a href="indext.html"><img src="images/logo.png" alt="" /></a>
+        <br> <br>
+        <br>
+        <h3>Contact</h3>
+        <address>
+          <p><b>Address:</b> Wellington Road, Street 32. San Francisco</p>
+          <p><b>Phone:</b> Wellington Road, Street 32. San Francisco</p>
+          <p><b>Hours</b> 10:00 - 18:00. Mon - Sat</p>
+        </address>
+        <h3>Follow Us</h3>
+        <br>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="about">
+        <h3>About</h3>
+        <br>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="myaccount ">
+        <h3>My account</h3>
+        <br>
+        <a href="#">Sign In</a>
+        <a href="cart.html">View Cart</a>
+        <a href="wishlist.html">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="install">
+        <h3>Install App</h3>
+        <br>
+        <p>From App Store or Google Play</p>
+        <div class="download">
+          <a href="#"><img src="images/pay/app.jpg" alt=""></a>
+          <a href="#"><img src="images/pay/play.jpg" alt=""></a>
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="images/pay/pay.png" alt="">
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const accountBtn = document.getElementById("accountBtn");
+      const dropdown = document.getElementById("accountDropdown");
+      accountBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle("show");
+      });
+      document.addEventListener("click", () => {
+        dropdown.classList.remove("show");
+      });
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        alert("Logged out successfully");
+      });
+      const wishBtns = document.querySelectorAll(".wishlist-btn");
+      const savedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      wishBtns.forEach(btn => {
+        const id = btn.dataset.id;
+        const icon = btn.querySelector("i");
+        const exists = savedWishlist.some(item => item.id === id);
+        if (exists) {
+          icon.classList.remove("fa-regular");
+          icon.classList.add("fa-solid");
+          icon.style.color = "red";
+        }
+      });
+      // Add to wishlist
+      wishBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+          const id = btn.dataset.id;
+          const name = btn.dataset.name;
+          const img = btn.dataset.img;
+          const price = btn.dataset.price;
+          const icon = btn.querySelector("i");
+          const exists = wishlist.some(item => item.id === id);
+          if (!exists) {
+            wishlist.push({ id, name, img, price });
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid");
+            icon.style.color = "red";
+            alert("Added to Wishlist ");
+          } else {
+            alert("Item is already in Wishlist!");
+          }
+        });
+      });
     });
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-
-  /* ================= CART FUNCTIONALITY ================= */
-
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  document.querySelectorAll(".add-to-cart").forEach(btn => {
-    btn.addEventListener("click", e => {
-      e.preventDefault();
-
-      const id = btn.dataset.id;
-      const name = btn.dataset.name;
-      const price = Number(btn.dataset.price);
-      const img = btn.dataset.img;
-
-      const existing = cart.find(item => item.id === id);
-
-      if (existing) {
-        existing.qty += 1;
-      } else {
-        cart.push({ id, name, price, img, qty: 1 });
-      }
-
-      localStorage.setItem("cart", JSON.stringify(cart));
-      alert("Product added to cart 🛒");
+    document.addEventListener("DOMContentLoaded", () => {
+      /* ================= CART FUNCTIONALITY ================= */
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      document.querySelectorAll(".add-to-cart").forEach(btn => {
+        btn.addEventListener("click", e => {
+          localStorage.setItem("cart", JSON.stringify(cart));
+          alert("Product added to cart");
+        });
+      });
     });
-  });
-
-});
-
-
-</script>
-    
-
-  
-
-</body></html>
+  </script>
+</body>
+</html>
